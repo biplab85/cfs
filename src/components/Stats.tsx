@@ -95,7 +95,7 @@ export default function Stats() {
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {siteContent.stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -107,7 +107,13 @@ export default function Stats() {
               {/* Card Glow */}
               <div className="absolute inset-0 bg-[#E10600]/10 blur-xl rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-              <div className="relative bg-[#111111]/80 border border-[#E10600]/10 rounded-lg p-6 md:p-8 text-center backdrop-blur-sm group-hover:border-[#E10600]/40 transition-all duration-500">
+              <div className="relative bg-[#111111]/80 border-0 sm:border sm:border-[#E10600]/10 rounded-lg p-6 md:p-8 text-center backdrop-blur-sm group-hover:border-[#E10600]/40 transition-all duration-500">
+                {/* Mobile 50% borders - centered on each side */}
+                <div className="sm:hidden absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-[#E10600]/40" />
+                <div className="sm:hidden absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-[#E10600]/40" />
+                <div className="sm:hidden absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-[#E10600]/40" />
+                <div className="sm:hidden absolute right-0 top-1/2 -translate-y-1/2 h-1/2 w-px bg-[#E10600]/40" />
+
                 {/* Number */}
                 <AnimatedCounter value={stat.value} />
 
