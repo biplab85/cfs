@@ -13,7 +13,7 @@ export const siteContent = {
     headline: "Where Stories Ignite",
     subheadline: "Sydney's leading podcast amplifying South Asian voices across the globe",
     ctaYoutube: "Watch on YouTube",
-    ctaFacebook: "Be Our Next Guest", 
+    ctaFacebook: "Be Our Next Guest",
     youtubeUrl: "https://youtube.com/@chilliflakesstudio",
     facebookUrl: "#",
   },
@@ -44,7 +44,7 @@ export const siteContent = {
       description: "And counting",
     },
     {
-      value: "142,887+",
+      value: "142K+",
       label: "YouTube Views",
       description: "Engaged audience",
     },
@@ -67,6 +67,24 @@ export const siteContent = {
     subtitle: "Extraordinary individuals sharing their inspiring stories, insights, and journeys",
     categories: ["All", "Cricket", "Music", "Medical", "Community", "Featured", "Up Coming"],
     data: [
+      {
+        id: "razaul",
+        name: "Razaul Karim Sumon",
+        role: "Featured Guest",
+        category: "Featured",
+        image: "/guests/Razaul Karim Sumon.jpeg",
+        videoUrl: "https://www.youtube.com/watch?v=CBiJhXtH8lE",
+        videoId: "CBiJhXtH8lE",
+      },
+      {
+        id: "Rafiq",
+        name: "Khan Sobayel Bin Rafiq",
+        role: "Featured Guest",
+        category: "Featured",
+        image: "/guests/Khan Sobayel Bin Rafiq.jpeg",
+        videoUrl: "https://www.youtube.com/watch?v=CBiJhXtH8lE",
+        videoId: "CBiJhXtH8lE",
+      },
       {
         id: "aminul",
         name: "Aminul Islam Bulbul",
@@ -112,15 +130,15 @@ export const siteContent = {
         videoUrl: "https://www.youtube.com/watch?v=1u9pzpplWe4",
         videoId: "1u9pzpplWe4",
       },
-      {
-        id: "shahalam",
-        name: "Shah Alam",
-        role: "Community Leader",
-        category: "Community",
-        image: "/guests/Shah Alam.webp",
-        videoUrl: "https://www.youtube.com/watch?v=CSoTkrbgKWU",
-        videoId: "CSoTkrbgKWU",
-      },
+      // {
+      //   id: "shahalam",
+      //   name: "Shah Alam",
+      //   role: "Community Leader",
+      //   category: "Community",
+      //   image: "/guests/Shah Alam.webp",
+      //   videoUrl: "https://www.youtube.com/watch?v=CSoTkrbgKWU",
+      //   videoId: "CSoTkrbgKWU",
+      // },
       {
         id: "riasat",
         name: "Riasat",
@@ -148,6 +166,7 @@ export const siteContent = {
         videoUrl: "https://www.youtube.com/watch?v=qzF5b08oMLI",
         videoId: "qzF5b08oMLI",
       },
+
       {
         id: "kishwar",
         name: "Kishwar Chowdhury",

@@ -28,7 +28,7 @@ export default function Guests() {
   const [visibleCount, setVisibleCount] = useState(8);
   const [isLoading, setIsLoading] = useState(false);
 
-  // Handle "View More" click
+  // Handle "View More" click - show 12 guests
   const handleViewMore = () => {
     setIsLoading(true);
     setTimeout(() => {
@@ -62,8 +62,9 @@ export default function Guests() {
     : guestsData.filter(guest => guest.category === activeCategory);
 
   const filteredGuests = allFilteredGuests.slice(0, visibleCount);
-  const hasMoreGuests = visibleCount < allFilteredGuests.length;
-  const allGuestsShown = visibleCount >= allFilteredGuests.length;
+  const hasMoreGuests = visibleCount < 12 && visibleCount < allFilteredGuests.length;
+  // Show YouTube button after expanding to 12 guests (or if all guests are already shown)
+  const showYouTubeButton = visibleCount >= 12 || visibleCount >= allFilteredGuests.length;
 
   const cardVariants = {
     hidden: { opacity: 0, y: 60, scale: 0.9 },
@@ -492,7 +493,7 @@ export default function Guests() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.8 }}
         >
-          {allGuestsShown ? (
+          {showYouTubeButton ? (
             // All guests shown - Show "View all on YouTube" button
             <motion.a
               href="https://www.youtube.com/@ChilliFlakesStudio"

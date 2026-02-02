@@ -124,7 +124,7 @@ export default function PlaylistViewer() {
                     </div>
                   ) : selectedVideo ? (
                     <iframe
-                      src={`https://www.youtube.com/embed/${selectedVideo.id}?rel=0&modestbranding=1&autoplay=1`}
+                      src={`https://www.youtube.com/embed/${selectedVideo.id}?rel=0&modestbranding=1&autoplay=0`}
                       title={selectedVideo.title}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen

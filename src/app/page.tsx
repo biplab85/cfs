@@ -17,7 +17,9 @@ export default function Home() {
     <main className="min-h-screen bg-[#0B0B0B]">
       <Navigation />
       {/* 1. Hero - Captures attention immediately */}
-      <Hero />
+      <HeroDesktop />
+      {/* 8. Social Media Presence */}
+      {/* <Hero /> */}
       {/* 2. Channel Statistics - Key metrics */}
       <Stats />
       {/* 3. Featured Guests - Prominent personalities */}
@@ -33,8 +35,7 @@ export default function Home() {
       {/* 7. Media Gallery - Visual highlights */}
       <Gallery />
       {/* Desktop Feature Section - Desktop view only */}
-      <HeroDesktop />
-      {/* 8. Social Media Presence */}
+      
       <Social />
       {/* 9. Call-to-Action */}
       <CTA />
