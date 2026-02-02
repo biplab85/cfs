@@ -123,8 +123,8 @@ export default function Gallery() {
     setLoaded(true);
 
     // Initialize Fancybox
-    Fancybox.bind("[data-fancybox='gallery']", {
-      animated: true,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (Fancybox.bind as any)("[data-fancybox='gallery']", {
       showClass: "f-zoomInUp",
       hideClass: "f-fadeOut",
       mainClass: "fancybox-gallery-popup",

@@ -99,22 +99,14 @@ export default function Guests() {
 
   // Initialize Fancybox for YouTube videos
   useEffect(() => {
-    Fancybox.bind("[data-fancybox='guest-video']", {
-      animated: true,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (Fancybox.bind as any)("[data-fancybox='guest-video']", {
       mainClass: "fancybox-video-popup",
-      Html: {
-        videoTpl: `<video class="fancybox__html5video" playsinline controls controlsList="nodownload" poster="{{poster}}"><source src="{{src}}" type="{{format}}" />Sorry, your browser doesn\'t support embedded videos.</video>`,
-      },
       Toolbar: {
         display: {
           left: [],
           middle: [],
           right: ["close"],
-        },
-      },
-      on: {
-        reveal: (fancybox: any) => {
-          // Auto-play video when opened
         },
       },
     });
@@ -138,7 +130,7 @@ export default function Guests() {
       transition: {
         delay: 0.1 * i,
         duration: 0.6,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
       },
     }),
   };

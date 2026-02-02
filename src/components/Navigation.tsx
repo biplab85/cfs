@@ -72,7 +72,7 @@ export default function Navigation() {
       y: 0,
       opacity: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 100,
         damping: 20,
         mass: 1,
@@ -84,9 +84,9 @@ export default function Navigation() {
       y: -100,
       opacity: 0,
       transition: {
-        type: "tween",
+        type: "tween" as const,
         duration: 0.3,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       },
     },
   };
@@ -97,7 +97,7 @@ export default function Navigation() {
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 120,
         damping: 14,
       },
@@ -108,7 +108,7 @@ export default function Navigation() {
     closed: {
       x: "100%",
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 300,
         damping: 30,
       },
@@ -116,7 +116,7 @@ export default function Navigation() {
     open: {
       x: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 300,
         damping: 30,
         staggerChildren: 0.07,
@@ -131,7 +131,7 @@ export default function Navigation() {
       x: 0,
       opacity: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 120,
         damping: 14,
       },
