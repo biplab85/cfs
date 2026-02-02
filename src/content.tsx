@@ -65,7 +65,7 @@ export const siteContent = {
   guests: {
     title: "Featured Guests",
     subtitle: "Extraordinary individuals sharing their inspiring stories, insights, and journeys",
-    categories: ["All", "Cricket", "Music", "Medical", "Community", "Featured", "Up Coming"],
+    categories: ["All", "Cricket", "Music", "Medical", "Community", "Featured", "Upcoming"],
     data: [
       {
         id: "aminul",
@@ -126,7 +126,7 @@ export const siteContent = {
         id: "tabith",
         name: "Tabith Awal",
         role: "Featured Guest",
-        category: "Up Coming",
+        category: "Upcoming",
         image: "/guests/Tabith Awal.jpeg",
         videoUrl: "",
         videoId: "",
@@ -183,7 +183,7 @@ export const siteContent = {
         id: "kishwar",
         name: "Kishwar Chowdhury",
         role: "Featured Guest",
-        category: "Up Coming",
+        category: "Upcoming",
         image: "/guests/Kishwar Chowdhury.jpeg",
         videoUrl: "",
         videoId: "",
@@ -194,7 +194,7 @@ export const siteContent = {
         id: "zohad",
         name: "Zohad",
         role: "Featured Guest",
-        category: "Up Coming",
+        category: "Upcoming",
         image: "/guests/Zohad.jpeg",
         videoUrl: "",
         videoId: "",

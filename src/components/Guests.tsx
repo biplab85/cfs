@@ -404,7 +404,7 @@ export default function Guests() {
                       transition={{ delay: 0.5 + index * 0.1 }}
                     >
                       <span className={`px-2.5 py-1 md:px-3 md:py-1.5 text-white text-[10px] md:text-xs font-semibold tracking-wider uppercase rounded-lg shadow-lg ${
-                        guest.category === "Up Coming"
+                        guest.category === "Upcoming"
                           ? "bg-gradient-to-r from-amber-500 to-orange-500 shadow-amber-500/30"
                           : "bg-[#E10600] shadow-[#E10600]/30"
                       }`}>
