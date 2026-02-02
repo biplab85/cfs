@@ -1,12 +1,18 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion, useInView, AnimatePresence } from "framer-motion";
+import { useRef, useState } from "react";
 import { siteContent } from "@/content";
 
 export default function CTA() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [showSubscribeModal, setShowSubscribeModal] = useState(false);
+
+  const handleSubscribe = () => {
+    window.open("https://www.youtube.com/@ChilliFlakesStudio", "_blank", "noopener,noreferrer");
+    setShowSubscribeModal(false);
+  };
 
   return (
     <section id="contact" className="relative py-32 overflow-hidden" ref={ref}>
@@ -115,7 +121,8 @@ export default function CTA() {
 
               {/* Button */}
               <motion.button
-                className="relative bg-white text-[#E10600] font-heading font-semibold text-sm tracking-widest uppercase px-8 py-4 rounded-sm w-full sm:w-auto hover:bg-gray-100 transition-colors"
+                onClick={() => setShowSubscribeModal(true)}
+                className="relative inline-block bg-white text-[#E10600] font-heading font-semibold text-sm tracking-widest uppercase px-8 py-4 rounded-sm w-full sm:w-auto hover:bg-gray-100 transition-colors cursor-pointer"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -134,6 +141,115 @@ export default function CTA() {
           </motion.div>
         </div>
       </div>
+
+      {/* Subscribe Confirmation Modal */}
+      <AnimatePresence>
+        {showSubscribeModal && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-xl"
+              onClick={() => setShowSubscribeModal(false)}
+            />
+
+            {/* Modal */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              transition={{ type: "spring" as const, stiffness: 300, damping: 25 }}
+              className="fixed inset-0 z-[101] flex items-center justify-center p-4"
+              onClick={() => setShowSubscribeModal(false)}
+            >
+              <div
+                className="relative bg-gradient-to-br from-[#1a1a1a] to-[#0d0d0d] border border-[#E10600]/20 rounded-2xl p-8 md:p-12 max-w-md w-full text-center shadow-2xl shadow-black/50"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Close Button */}
+                <button
+                  onClick={() => setShowSubscribeModal(false)}
+                  className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/5 hover:bg-[#E10600] flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+
+                {/* YouTube Icon */}
+                <motion.div
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: 0.1 }}
+                  className="mb-6"
+                >
+                  <div className="w-20 h-20 md:w-24 md:h-24 mx-auto bg-[#E10600]/10 rounded-full flex items-center justify-center border border-[#E10600]/30">
+                    <svg className="w-10 h-10 md:w-12 md:h-12 text-[#E10600]" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                  </div>
+                </motion.div>
+
+                {/* Decorative Line */}
+                <motion.div
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ delay: 0.2, duration: 0.5 }}
+                  className="w-16 h-1 bg-gradient-to-r from-[#E10600] to-[#ff4d4d] mx-auto mb-6 rounded-full"
+                />
+
+                {/* Message */}
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+                    Subscribe to Our Channel
+                  </h3>
+                  <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-2">
+                    Do you want to subscribe to
+                  </p>
+                  <p className="text-[#E10600] font-semibold text-lg md:text-xl">
+                    Chilli Flakes Studio?
+                  </p>
+                </motion.div>
+
+                {/* Action Buttons */}
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                  className="flex flex-col sm:flex-row gap-3 mt-8"
+                >
+                  <button
+                    onClick={() => setShowSubscribeModal(false)}
+                    className="flex-1 px-6 py-3 bg-white/5 hover:bg-white/10 text-gray-300 font-semibold rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    onClick={handleSubscribe}
+                    className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-[#E10600] to-[#ff1a1a] text-white font-semibold rounded-xl shadow-lg shadow-[#E10600]/25 hover:shadow-[#E10600]/40 hover:scale-105 transition-all duration-300"
+                  >
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                    Subscribe
+                  </button>
+                </motion.div>
+
+                {/* Corner Decorations */}
+                <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-[#E10600]/30 rounded-tl-2xl" />
+                <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-[#E10600]/30 rounded-br-2xl" />
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

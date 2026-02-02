@@ -4,6 +4,7 @@ import HeroDesktop from "@/components/HeroDesktop";
 import Stats from "@/components/Stats";
 import Guests from "@/components/Guests";
 import Episodes from "@/components/Episodes";
+import PlaylistViewer from "@/components/PlaylistViewer";
 import GlobalReach from "@/components/GlobalReach";
 import About from "@/components/About";
 import Gallery from "@/components/Gallery";
@@ -23,6 +24,8 @@ export default function Home() {
       <Guests />
       {/* 4. Latest Episodes - Fresh content */}
       <Episodes />
+      {/* Playlist Viewer - Full episode playlist */}
+      <PlaylistViewer />
       {/* 5. Global Reach - International audience */}
       <GlobalReach />
       {/* 6. Our Story - Background and mission */}
