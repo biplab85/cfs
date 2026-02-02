@@ -3,6 +3,7 @@
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import { Fancybox } from "@fancyapps/ui";
+import { siteContent } from "@/content";
 
 interface Guest {
   id: string;
@@ -15,122 +16,9 @@ interface Guest {
   upcoming?: boolean;
 }
 
-// Guest data with local images and YouTube links
-const guestsData: Guest[] = [
-  {
-    id: "aminul",
-    name: "Aminul Islam Bulbul",
-    role: "President of BCB",
-    category: "Cricket",
-    image: "/guests/Aminul Islam Bulbul.webp",
-    videoUrl: "https://www.youtube.com/watch?v=4gJz7TtLWKs",
-    videoId: "4gJz7TtLWKs",
-  },
-  {
-    id: "khaled",
-    name: "Khaled Mashud Pilot",
-    role: "Former Captain, Bangladesh Cricket",
-    category: "Cricket",
-    image: "/guests/Khaled Mashud Pilot.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=y7B1_N6NB0s",
-    videoId: "y7B1_N6NB0s",
-  },
-  {
-    id: "habibul",
-    name: "Habibul Bashar",
-    role: "Former Captain, Bangladesh Cricket",
-    category: "Cricket",
-    image: "/guests/Habibul Bashar.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=oWwvR9G4QIc",
-    videoId: "oWwvR9G4QIc",
-  },
-  {
-    id: "hamin",
-    name: "Hamin Ahmed",
-    role: "Founder of Band Miles",
-    category: "Music",
-    image: "/guests/HaminAhmed.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=yQJrKS3d4bI",
-    videoId: "yQJrKS3d4bI",
-  },
-  {
-    id: "sabrin",
-    name: "Dr. Sabrin",
-    role: "Medical Professional",
-    category: "Medical",
-    image: "/guests/Dr.Sabrin.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=1u9pzpplWe4",
-    videoId: "1u9pzpplWe4",
-  },
-  {
-    id: "shahalam",
-    name: "Shah Alam",
-    role: "Community Leader",
-    category: "Community",
-    image: "/guests/Shah Alam.webp",
-    videoUrl: "https://www.youtube.com/watch?v=CSoTkrbgKWU",
-    videoId: "CSoTkrbgKWU",
-  },
-  {
-    id: "riasat",
-    name: "Riasat",
-    role: "Featured Guest",
-    category: "Featured",
-    image: "/guests/Riasat .png",
-    videoUrl: "https://www.youtube.com/watch?v=fJBPbK38zms",
-    videoId: "fJBPbK38zms",
-  },
-  {
-    id: "cezanne",
-    name: "Cezanne",
-    role: "Featured Guest",
-    category: "Featured",
-    image: "/guests/Cezanne.png",
-    videoUrl: "https://www.youtube.com/watch?v=cwrlxWBGuEs",
-    videoId: "cwrlxWBGuEs",
-  },
-  {
-    id: "imroze",
-    name: "Imroze Ahmed",
-    role: "Featured Guest",
-    category: "Featured",
-    image: "/guests/Imroze Ahmed.jpeg",
-    videoUrl: "https://www.youtube.com/watch?v=qzF5b08oMLI",
-    videoId: "qzF5b08oMLI",
-  },
-  {
-    id: "kishwar",
-    name: "Kishwar Chowdhury",
-    role: "Featured Guest",
-    category: "Featured",
-    image: "/guests/Kishwar Chowdhury.jpeg",
-    videoUrl: "",
-    videoId: "",
-    upcoming: true,
-  },
-  {
-    id: "tabith",
-    name: "Tabith Awal",
-    role: "Featured Guest",
-    category: "Featured",
-    image: "/guests/Tabith Awal.jpeg",
-    videoUrl: "",
-    videoId: "",
-    upcoming: true,
-  },
-  {
-    id: "zohad",
-    name: "Zohad",
-    role: "Featured Guest",
-    category: "Featured",
-    image: "/guests/Zohad.jpeg",
-    videoUrl: "",
-    videoId: "",
-    upcoming: true,
-  },
-];
-
-const categories = ["All", "Cricket", "Music", "Medical", "Community", "Featured"];
+// Get guest data and categories from content.tsx
+const guestsData: Guest[] = siteContent.guests.data;
+const categories = siteContent.guests.categories;
 
 export default function Guests() {
   const ref = useRef(null);
@@ -437,7 +325,7 @@ export default function Guests() {
             Featured <span className="bg-gradient-to-r from-[#E10600] to-[#ff4d4d] bg-clip-text text-transparent">Guests</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Extraordinary individuals sharing their inspiring stories, insights, and journeys
+            {siteContent.guests.subtitle}
           </p>
         </motion.div>
 
@@ -514,7 +402,11 @@ export default function Guests() {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.5 + index * 0.1 }}
                     >
-                      <span className="px-2.5 py-1 md:px-3 md:py-1.5 bg-[#E10600] text-white text-[10px] md:text-xs font-semibold tracking-wider uppercase rounded-lg shadow-lg shadow-[#E10600]/30">
+                      <span className={`px-2.5 py-1 md:px-3 md:py-1.5 text-white text-[10px] md:text-xs font-semibold tracking-wider uppercase rounded-lg shadow-lg ${
+                        guest.category === "Up Coming"
+                          ? "bg-gradient-to-r from-amber-500 to-orange-500 shadow-amber-500/30"
+                          : "bg-[#E10600] shadow-[#E10600]/30"
+                      }`}>
                         {guest.category}
                       </span>
                     </motion.div>

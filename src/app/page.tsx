@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import HeroDesktop from "@/components/HeroDesktop";
 import Stats from "@/components/Stats";
 import Guests from "@/components/Guests";
 import Episodes from "@/components/Episodes";
@@ -28,6 +29,8 @@ export default function Home() {
       <About />
       {/* 7. Media Gallery - Visual highlights */}
       <Gallery />
+      {/* Desktop Feature Section - Desktop view only */}
+      <HeroDesktop />
       {/* 8. Social Media Presence */}
       <Social />
       {/* 9. Call-to-Action */}
