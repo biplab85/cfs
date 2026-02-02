@@ -4,7 +4,6 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import Masonry from "react-masonry-css";
 import { Fancybox } from "@fancyapps/ui";
-import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 // Gallery images - Behind the scenes content
 const galleryImages = [
