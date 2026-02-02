@@ -5,7 +5,7 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-
 import { siteContent } from "@/content";
 
 export default function Navigation() {
-  const [isVisible, setIsVisible] = useState(true); // Default visible for mobile
+  const [isVisible, setIsVisible] = useState(false); // Hidden by default
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [isMobile, setIsMobile] = useState(true); // Default to mobile
@@ -56,17 +56,12 @@ export default function Navigation() {
   }, [updateActiveSection]);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    // On mobile: always show header
-    // On desktop: show header after scrolling 100px
-    if (isMobile) {
+    // Show header after scrolling 100px on both mobile and desktop
+    if (latest > 100) {
       setIsVisible(true);
     } else {
-      if (latest > 100) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-        setIsMobileMenuOpen(false);
-      }
+      setIsVisible(false);
+      setIsMobileMenuOpen(false);
     }
   });
 

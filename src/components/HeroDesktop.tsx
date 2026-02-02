@@ -33,17 +33,17 @@ export default function HeroDesktop() {
       {/* Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 w-full">
         <div className="flex flex-col items-center text-center">
-          {/* Logo - Prominently displayed (hidden on mobile) */}
+          {/* Logo - Prominently displayed */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="mb-6 md:mb-8 hidden md:block"
+            className="mb-6 md:mb-8"
           >
             <img
               src="/logo.png"
               alt="Chilli Flakes Studio"
-              className="w-30 h-auto mx-auto drop-shadow-[0_0_30px_rgba(225,6,0,0.3)]"
+              className="w-[60%] sm:w-[50%] md:w-30 h-auto mx-auto drop-shadow-[0_0_30px_rgba(225,6,0,0.3)]"
             />
           </motion.div>
 
@@ -140,11 +140,11 @@ export default function HeroDesktop() {
         </h2>
       </motion.div>
 
-      {/* Scroll Indicator (hidden on mobile) */}
+      {/* Scroll Indicator */}
       <AnimatePresence>
         {isInView && (
           <motion.div
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 hidden md:flex flex-col items-center"
+            className="absolute bottom-4 md:bottom-0 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
