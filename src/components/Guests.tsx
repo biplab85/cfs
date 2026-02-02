@@ -12,6 +12,7 @@ interface Guest {
   image: string;
   videoUrl: string;
   videoId: string;
+  upcoming?: boolean;
 }
 
 // Guest data with local images and YouTube links
@@ -88,6 +89,45 @@ const guestsData: Guest[] = [
     videoUrl: "https://www.youtube.com/watch?v=cwrlxWBGuEs",
     videoId: "cwrlxWBGuEs",
   },
+  {
+    id: "imroze",
+    name: "Imroze Ahmed",
+    role: "Featured Guest",
+    category: "Featured",
+    image: "/guests/Imroze Ahmed.jpeg",
+    videoUrl: "https://www.youtube.com/watch?v=qzF5b08oMLI",
+    videoId: "qzF5b08oMLI",
+  },
+  {
+    id: "kishwar",
+    name: "Kishwar Chowdhury",
+    role: "Featured Guest",
+    category: "Featured",
+    image: "/guests/Kishwar Chowdhury.jpeg",
+    videoUrl: "",
+    videoId: "",
+    upcoming: true,
+  },
+  {
+    id: "tabith",
+    name: "Tabith Awal",
+    role: "Featured Guest",
+    category: "Featured",
+    image: "/guests/Tabith Awal.jpeg",
+    videoUrl: "",
+    videoId: "",
+    upcoming: true,
+  },
+  {
+    id: "zohad",
+    name: "Zohad",
+    role: "Featured Guest",
+    category: "Featured",
+    image: "/guests/Zohad.jpeg",
+    videoUrl: "",
+    videoId: "",
+    upcoming: true,
+  },
 ];
 
 const categories = ["All", "Cricket", "Music", "Medical", "Community", "Featured"];
@@ -96,6 +136,18 @@ export default function Guests() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [activeCategory, setActiveCategory] = useState("All");
+  const [showComingSoon, setShowComingSoon] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(8);
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Handle "View More" click
+  const handleViewMore = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setVisibleCount(12);
+      setIsLoading(false);
+    }, 800);
+  };
 
   // Initialize Fancybox for YouTube videos
   useEffect(() => {
@@ -116,10 +168,14 @@ export default function Guests() {
     };
   }, []);
 
-  // Filter guests by category
-  const filteredGuests = activeCategory === "All"
+  // Filter guests by category and limit visible count
+  const allFilteredGuests = activeCategory === "All"
     ? guestsData
     : guestsData.filter(guest => guest.category === activeCategory);
+
+  const filteredGuests = allFilteredGuests.slice(0, visibleCount);
+  const hasMoreGuests = visibleCount < allFilteredGuests.length;
+  const allGuestsShown = visibleCount >= allFilteredGuests.length;
 
   const cardVariants = {
     hidden: { opacity: 0, y: 60, scale: 0.9 },
@@ -463,17 +519,28 @@ export default function Guests() {
                       </span>
                     </motion.div>
 
-                    {/* Play/View Button - Opens YouTube Video */}
-                    <a
-                      href={`https://www.youtube.com/embed/${guest.videoId}?autoplay=1&rel=0`}
-                      data-fancybox="guest-video"
-                      data-caption={`${guest.name} - ${guest.role}`}
-                      className="absolute top-3 right-3 md:top-4 md:right-4 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white border border-white/20 transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 hover:bg-[#E10600] hover:border-[#E10600] hover:scale-110 shadow-lg"
-                    >
-                      <svg className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </a>
+                    {/* Play/View Button - Opens YouTube Video or Coming Soon Modal (Mobile only) */}
+                    {guest.upcoming ? (
+                      <button
+                        onClick={() => setShowComingSoon(true)}
+                        className="playBtn absolute top-3 right-3 w-10 h-10 rounded-full bg-black/40 backdrop-blur-md flex md:hidden items-center justify-center text-white border border-white/20 transition-all duration-300 hover:bg-[#E10600] hover:border-[#E10600] hover:scale-110 shadow-lg"
+                      >
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </button>
+                    ) : (
+                      <a
+                        href={`https://www.youtube.com/embed/${guest.videoId}?autoplay=1&rel=0`}
+                        data-fancybox="guest-video"
+                        data-caption={`${guest.name} - ${guest.role}`}
+                        className="absolute top-3 right-3 w-10 h-10 rounded-full bg-black/40 backdrop-blur-md flex md:hidden items-center justify-center text-white border border-white/20 transition-all duration-300 hover:bg-[#E10600] hover:border-[#E10600] hover:scale-110 shadow-lg"
+                      >
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </a>
+                    )}
 
                     {/* Guest Info Overlay */}
                     <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5 transform transition-transform duration-300">
@@ -486,18 +553,31 @@ export default function Guests() {
                     </div>
 
                     {/* Center Play Button (visible on hover) */}
-                    <a
-                      href={`https://www.youtube.com/embed/${guest.videoId}?autoplay=1&rel=0`}
-                      data-fancybox="guest-video"
-                      data-caption={`${guest.name} - ${guest.role}`}
-                      className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    >
-                      <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#E10600]/90 backdrop-blur-sm flex items-center justify-center shadow-2xl shadow-[#E10600]/50 transform scale-75 group-hover:scale-100 transition-transform duration-300">
-                        <svg className="w-7 h-7 md:w-8 md:h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </div>
-                    </a>
+                    {guest.upcoming ? (
+                      <button
+                        onClick={() => setShowComingSoon(true)}
+                        className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      >
+                        <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#E10600]/90 backdrop-blur-sm flex items-center justify-center shadow-2xl shadow-[#E10600]/50 transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                          <svg className="w-7 h-7 md:w-8 md:h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
+                      </button>
+                    ) : (
+                      <a
+                        href={`https://www.youtube.com/embed/${guest.videoId}?autoplay=1&rel=0`}
+                        data-fancybox="guest-video"
+                        data-caption={`${guest.name} - ${guest.role}`}
+                        className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      >
+                        <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#E10600]/90 backdrop-blur-sm flex items-center justify-center shadow-2xl shadow-[#E10600]/50 transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                          <svg className="w-7 h-7 md:w-8 md:h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
+                      </a>
+                    )}
 
                     {/* Shine Effect on Hover */}
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
@@ -513,29 +593,58 @@ export default function Guests() {
           </motion.div>
         </AnimatePresence>
 
-        {/* View All Button */}
+        {/* View More / View All Button */}
         <motion.div
           className="text-center mt-12 md:mt-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.8 }}
         >
-          <motion.a
-            href="https://www.youtube.com/@ChilliFlakesStudio"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#E10600] to-[#ff1a1a] text-white font-semibold rounded-xl shadow-lg shadow-[#E10600]/25 hover:shadow-[#E10600]/40 transition-all duration-300"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-            </svg>
-            View All Episodes
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </motion.a>
+          {allGuestsShown ? (
+            // All guests shown - Show "View all on YouTube" button
+            <motion.a
+              href="https://www.youtube.com/@ChilliFlakesStudio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#E10600] to-[#ff1a1a] text-white font-semibold rounded-xl shadow-lg shadow-[#E10600]/25 hover:shadow-[#E10600]/40 transition-all duration-300"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+              View all on YouTube
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </motion.a>
+          ) : (
+            // More guests to show - Show "View more" button with loading state
+            <motion.button
+              onClick={handleViewMore}
+              disabled={isLoading}
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#E10600] to-[#ff1a1a] text-white font-semibold rounded-xl shadow-lg shadow-[#E10600]/25 hover:shadow-[#E10600]/40 transition-all duration-300 disabled:opacity-80"
+              whileHover={isLoading ? {} : { scale: 1.05, y: -2 }}
+              whileTap={isLoading ? {} : { scale: 0.98 }}
+            >
+              {isLoading ? (
+                <>
+                  <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                  </svg>
+                  Loading...
+                </>
+              ) : (
+                <>
+                  View more
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </>
+              )}
+            </motion.button>
+          )}
         </motion.div>
       </div>
 
@@ -644,6 +753,107 @@ export default function Guests() {
           }
         }
       `}</style>
+
+      {/* Coming Soon Modal */}
+      <AnimatePresence>
+        {showComingSoon && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-xl"
+              onClick={() => setShowComingSoon(false)}
+            />
+
+            {/* Modal */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              transition={{ type: "spring" as const, stiffness: 300, damping: 25 }}
+              className="fixed inset-0 z-[101] flex items-center justify-center p-4"
+              onClick={() => setShowComingSoon(false)}
+            >
+              <div
+                className="relative bg-gradient-to-br from-[#1a1a1a] to-[#0d0d0d] border border-[#E10600]/20 rounded-2xl p-8 md:p-12 max-w-md w-full text-center shadow-2xl shadow-black/50"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Close Button */}
+                <button
+                  onClick={() => setShowComingSoon(false)}
+                  className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/5 hover:bg-[#E10600] flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+
+                {/* Logo */}
+                <motion.div
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: 0.1 }}
+                  className="mb-6"
+                >
+                  <img
+                    src="/logo.png"
+                    alt="Chilli Flakes Studio"
+                    className="w-24 h-24 md:w-32 md:h-32 mx-auto object-contain"
+                  />
+                </motion.div>
+
+                {/* Decorative Line */}
+                <motion.div
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ delay: 0.2, duration: 0.5 }}
+                  className="w-16 h-1 bg-gradient-to-r from-[#E10600] to-[#ff4d4d] mx-auto mb-6 rounded-full"
+                />
+
+                {/* Message */}
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+                    Episode Recorded
+                  </h3>
+                  <p className="text-gray-400 text-base md:text-lg leading-relaxed">
+                    Coming soon on{" "}
+                    <span className="text-[#E10600] font-semibold">Chilli Flakes Studio</span>
+                  </p>
+                </motion.div>
+
+                {/* Subscribe Button */}
+                <motion.a
+                  href="https://www.youtube.com/@ChilliFlakesStudio?sub_confirmation=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                  className="inline-flex items-center gap-2 mt-8 px-6 py-3 bg-gradient-to-r from-[#E10600] to-[#ff1a1a] text-white font-semibold rounded-xl shadow-lg shadow-[#E10600]/25 hover:shadow-[#E10600]/40 hover:scale-105 transition-all duration-300"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                  Subscribe for Updates
+                </motion.a>
+
+                {/* Corner Decorations */}
+                <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-[#E10600]/30 rounded-tl-2xl" />
+                <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-[#E10600]/30 rounded-br-2xl" />
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
+
+

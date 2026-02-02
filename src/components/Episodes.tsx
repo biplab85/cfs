@@ -17,6 +17,62 @@ interface YouTubeVideo {
   thumbnail: string;
 }
 
+// Custom thumbnail component with fallback
+function VideoThumbnail({ src, alt }: { src: string; alt: string }) {
+  const [showFallback, setShowFallback] = useState(false);
+
+  const handleError = () => {
+    setShowFallback(true);
+  };
+
+  const handleLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = e.currentTarget;
+    // YouTube placeholder thumbnails are typically 120x90 or have very small dimensions
+    // Also check if the image is the default "no thumbnail" gray image
+    if (img.naturalWidth <= 120 || img.naturalHeight <= 90) {
+      setShowFallback(true);
+    }
+  };
+
+  if (showFallback) {
+    return (
+      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#1a1a1a] via-[#111] to-[#0a0a0a]">
+        {/* Subtle pattern overlay */}
+        <div className="absolute inset-0 opacity-20" style={{
+          backgroundImage: "radial-gradient(circle at 1px 1px, rgba(225,6,0,0.15) 1px, transparent 0)",
+          backgroundSize: "24px 24px",
+        }} />
+        {/* Logo container */}
+        <div className="relative z-10 flex flex-col items-center justify-center">
+          <img
+            src="/logo.png"
+            alt="Chilli Flakes Studio"
+            className="w-20 h-20 md:w-28 md:h-28 object-contain drop-shadow-lg"
+          />
+          <div className="hidden mt-3 px-3 py-1 bg-[#E10600]/20 rounded-full">
+            <span className="text-[10px] md:text-xs text-[#E10600] font-semibold tracking-wider uppercase">
+              Episode
+            </span>
+          </div>
+        </div>
+        {/* Corner accents */}
+        <div className="absolute top-3 left-3 w-8 h-8 border-t border-l border-[#E10600]/30 rounded-tl-lg" />
+        <div className="absolute bottom-3 right-3 w-8 h-8 border-b border-r border-[#E10600]/30 rounded-br-lg" />
+      </div>
+    );
+  }
+
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+      onError={handleError}
+      onLoad={handleLoad}
+    />
+  );
+}
+
 // Fallback with sample YouTube video IDs (these are real YouTube thumbnails)
 const fallbackEpisodes: YouTubeVideo[] = [
   { id: "dQw4w9WgXcQ", title: "Cricket & Leadership with Aminul Islam Bulbul", thumbnail: "" },
@@ -230,16 +286,7 @@ export default function Episodes() {
                     <div className="relative group">
                       {/* Video Thumbnail */}
                       <div className="relative aspect-video rounded-2xl overflow-hidden bg-[#111] border border-white/5 shadow-2xl shadow-black/50">
-                        <img
-                          src={episode.thumbnail}
-                          alt={episode.title}
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                          onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-                            target.src = "/logo.png";
-                            target.className = "w-full h-full object-contain p-8 bg-[#111]";
-                          }}
-                        />
+                        <VideoThumbnail src={episode.thumbnail} alt={episode.title} />
 
                         {/* Red glow on hover */}
                         <div className="absolute inset-0 bg-[#E10600]/0 group-hover:bg-[#E10600]/10 transition-colors duration-500" />
