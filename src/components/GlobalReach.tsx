@@ -180,7 +180,7 @@ export default function GlobalReach() {
 
         {/* Bottom stats */}
         <motion.div
-          className="mt-16 pt-12 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-8"
+          className="hidden mt-16 pt-12 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-8"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.8 }}

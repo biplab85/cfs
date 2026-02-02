@@ -94,7 +94,7 @@ export default function Social() {
                   {platform.followers}
                 </div>
                 <span className="text-xs text-gray-500 font-heading tracking-widest uppercase">
-                  Followers
+                  {platform.icon === "youtube" ? "Subscribers" : "Followers"}
                 </span>
 
                 {/* Corner Decorations */}

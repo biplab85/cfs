@@ -40,20 +40,26 @@ export default function Footer() {
               Quick Links
             </h4>
             <ul className="space-y-3">
-              {["About", "Statistics", "Guests", "Episodes", "Contact"].map((link, index) => (
+              {[
+                { label: "Statistics", href: "#stats" },
+                { label: "About", href: "#about" },
+                { label: "Guests", href: "#guests" },
+                { label: "Episodes", href: "#episodes" },
+                // { label: "Contact", href: "#contact" },
+              ].map((link, index) => (
                 <motion.li
-                  key={link}
+                  key={link.label}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
                   <a
-                    href={`#${link.toLowerCase()}`}
+                    href={link.href}
                     className="text-gray-500 hover:text-[#E10600] transition-colors font-body text-sm flex items-center gap-2 group"
                   >
                     <span className="w-0 h-px bg-[#E10600] group-hover:w-4 transition-all duration-300" />
-                    {link}
+                    {link.label}
                   </a>
                 </motion.li>
               ))}

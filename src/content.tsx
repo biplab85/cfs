@@ -29,22 +29,22 @@ export const siteContent = {
 
   stats: [
     {
-      value: "13K+",
+      value: "20K+",
       label: "Facebook Followers",
       description: "Growing community",
     },
     {
-      value: "1.5M+",
+      value: "142,887+",
       label: "Total Views",
       description: "Across META platforms",
     },
     {
-      value: "1.2K+",
+      value: "3.61K+",
       label: "YouTube Subscribers",
       description: "And counting",
     },
     {
-      value: "30K+",
+      value: "142,887+",
       label: "YouTube Views",
       description: "Engaged audience",
     },
@@ -136,26 +136,26 @@ export const siteContent = {
     platforms: [
       {
         name: "Facebook",
-        url: "https://facebook.com/chilliflakesstudio",
-        followers: "13K+",
+        url: "https://www.facebook.com/profile.php?id=61577216227183",
+        followers: "20K+",
         icon: "facebook",
       },
       {
         name: "YouTube",
-        url: "https://youtube.com/@chilliflakesstudio",
-        followers: "1.2K+",
+        url: "https://www.youtube.com/@chilliflakesstudio",
+        followers: "3.61K",
         icon: "youtube",
       },
       {
         name: "Instagram",
-        url: "https://instagram.com/chilliflakesstudio",
-        followers: "2K+",
+        url: "https://www.instagram.com/chilliflakesstudio",
+        followers: "90+",
         icon: "instagram",
       },
       {
         name: "TikTok",
-        url: "https://tiktok.com/@chilliflakesstudio",
-        followers: "500+",
+        url: "https://www.tiktok.com/@thechilliflakesst",
+        followers: "319+",
         icon: "tiktok",
       },
     ],
@@ -174,9 +174,9 @@ export const siteContent = {
     copyright: `© ${new Date().getFullYear()} Chilli Flakes Studio. All rights reserved.`,
     tagline: "Amplifying South Asian Voices from Sydney to the World",
     links: [
-      { label: "Privacy Policy", url: "/privacy" },
-      { label: "Terms of Service", url: "/terms" },
-      { label: "Contact", url: "/contact" },
+      { label: "Privacy Policy", url: "#" },
+      { label: "Terms of Service", url: "#" },
+      { label: "Contact", url: "#" },
     ],
   },
 };

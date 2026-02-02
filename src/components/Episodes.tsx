@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow } from "swiper/modules";
+import { EffectCoverflow, Autoplay } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import { siteContent } from "@/content";
 
@@ -204,7 +204,12 @@ export default function Episodes() {
                 },
               },
             }}
-            modules={[EffectCoverflow]}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            modules={[EffectCoverflow, Autoplay]}
             onSwiper={setSwiperInstance}
             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
             className="w-full"

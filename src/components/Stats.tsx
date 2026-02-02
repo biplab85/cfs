@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useMemo } from "react";
 import { siteContent } from "@/content";
 
 function AnimatedCounter({ value, duration = 2 }: { value: string; duration?: number }) {
@@ -9,8 +9,16 @@ function AnimatedCounter({ value, duration = 2 }: { value: string; duration?: nu
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  const numericValue = parseInt(value.replace(/[^0-9]/g, ""));
-  const suffix = value.replace(/[0-9]/g, "");
+  // Extract numeric value (including decimals) and suffix - memoize to keep stable
+  const { numericValue, suffix, decimalPlaces } = useMemo(() => {
+    const match = value.match(/^([\d,.]+)(.*)$/);
+    const numericString = match ? match[1].replace(/,/g, "") : "0";
+    return {
+      numericValue: parseFloat(numericString),
+      suffix: match ? match[2] : "",
+      decimalPlaces: numericString.includes(".") ? numericString.split(".")[1]?.length || 0 : 0,
+    };
+  }, [value]);
 
   useEffect(() => {
     if (!isInView) return;
@@ -22,7 +30,13 @@ function AnimatedCounter({ value, duration = 2 }: { value: string; duration?: nu
 
       // Easing function
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      setCount(Math.floor(easeOutQuart * numericValue));
+      const currentValue = easeOutQuart * numericValue;
+
+      if (decimalPlaces > 0) {
+        setCount(parseFloat(currentValue.toFixed(decimalPlaces)));
+      } else {
+        setCount(Math.floor(currentValue));
+      }
 
       if (progress < 1) {
         requestAnimationFrame(animate);
@@ -30,11 +44,16 @@ function AnimatedCounter({ value, duration = 2 }: { value: string; duration?: nu
     };
 
     requestAnimationFrame(animate);
-  }, [isInView, numericValue, duration]);
+  }, [isInView, numericValue, duration, decimalPlaces]);
+
+  // Format the count for display
+  const displayValue = decimalPlaces > 0
+    ? count.toFixed(decimalPlaces)
+    : count.toLocaleString();
 
   return (
     <span ref={ref} className="stat-number">
-      {count.toLocaleString()}{suffix}
+      {displayValue}{suffix}
     </span>
   );
 }

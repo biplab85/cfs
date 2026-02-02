@@ -20,7 +20,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Video Background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 top-[-150px]">
         <video
           autoPlay
           loop
@@ -36,7 +36,7 @@ export default function Hero() {
       </div>
 
       {/* Subtle grain texture */}
-      <div className="absolute inset-0 bg-[#000000d1]" />
+      <div className="absolute inset-0 bg-[#00000085]" />
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
