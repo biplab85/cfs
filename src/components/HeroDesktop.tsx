@@ -38,7 +38,7 @@ export default function HeroDesktop() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="mb-6 md:mb-8"
+            className="mb-4 md:mb-4"
           >
             <img
               src="/logo.png"
@@ -52,7 +52,7 @@ export default function HeroDesktop() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-6 md:mb-8"
+            className="mb-4 md:mb-4"
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 md:px-5 md:py-2.5 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-xs md:text-sm text-gray-300 font-medium tracking-wide">
               <span className="w-2 h-2 rounded-full bg-[#E10600] animate-pulse" />
@@ -62,7 +62,7 @@ export default function HeroDesktop() {
 
           {/* Main Headline */}
           <motion.h1
-            className="font-display text-[50px] sm:text-6xl md:text-7xl xl:text-8xl 2xl:text-9xl font-bold text-white mb-4 md:mb-6 tracking-tight leading-[0.9]"
+            className="font-display text-[50px] sm:text-6xl md:text-7xl xl:text-8xl 2xl:text-9xl font-bold text-white mb-4 md:mb-4 tracking-tight leading-[0.9]"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -75,7 +75,7 @@ export default function HeroDesktop() {
 
           {/* Subheadline */}
           <motion.p
-            className="font-body text-base sm:text-lg md:text-xl xl:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed px-4"
+            className="font-body text-base sm:text-lg md:text-xl xl:text-2xl text-gray-300 max-w-3xl mx-auto mb-4 md:mb-8 leading-relaxed px-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
@@ -94,7 +94,7 @@ export default function HeroDesktop() {
               href={siteContent.hero.youtubeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative inline-flex items-center justify-center gap-2 sm:gap-3 w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-5 bg-[#E10600] text-white font-semibold text-base sm:text-lg rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_0_50px_rgba(225,6,0,0.5)]"
+              className="group relative inline-flex items-center justify-center gap-2 sm:gap-3 w-full sm:w-auto px-6 sm:px-7 py-2 sm:py-3 bg-[#E10600] text-white font-semibold text-base sm:text-lg rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_0_50px_rgba(225,6,0,0.5)]"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -107,7 +107,7 @@ export default function HeroDesktop() {
 
             <motion.a
               href={siteContent.hero.facebookUrl}
-              className="group inline-flex items-center justify-center gap-2 sm:gap-3 w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-5 bg-white/5 backdrop-blur-md text-white font-semibold text-base sm:text-lg rounded-lg border border-white/20 transition-all duration-300 hover:bg-white/10 hover:border-white/40"
+              className="group inline-flex items-center justify-center gap-2 sm:gap-3 w-full sm:w-auto px-6 sm:px-7 py-2 sm:py-3 bg-white/5 backdrop-blur-md text-white font-semibold text-base sm:text-lg rounded-lg border border-white/20 transition-all duration-300 hover:bg-white/10 hover:border-white/40"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -144,7 +144,7 @@ export default function HeroDesktop() {
       <AnimatePresence>
         {isInView && (
           <motion.div
-            className="absolute bottom-4 md:bottom-0 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center"
+            className="absolute bottom-4 md:bottom-[25px] left-1/2 -translate-x-1/2 z-20 flex flex-col items-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
