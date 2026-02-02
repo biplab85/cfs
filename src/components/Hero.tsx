@@ -19,8 +19,25 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-      {/* Video Background */}
-      <div className="absolute inset-0 top-0 md:top-[-150px] flex justify-center">
+      {/* Mobile Logo - only visible on mobile */}
+      <div className="absolute top-8 left-1/2 -translate-x-1/2 z-20 md:hidden w-[80%]">
+        <img src="/logo.png" alt="Chilli Flakes Studio" className="w-[75px] m-auto h-auto" />
+      </div>
+
+      {/* Mobile Gradient Background - only visible on mobile */}
+      <div className="absolute inset-0 md:hidden">
+        {/* Base dark gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#111111] to-[#0B0B0B]" />
+        {/* Subtle red radial glow from top */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(225,6,0,0.15)_0%,_transparent_50%)]" />
+        {/* Subtle red radial glow from bottom */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(225,6,0,0.1)_0%,_transparent_40%)]" />
+        {/* Corner accent */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(225,6,0,0.08)_0%,_transparent_30%)]" />
+      </div>
+
+      {/* Video Background - hidden on mobile */}
+      <div className="hidden md:flex absolute inset-0 top-0 md:top-[-150px] justify-center">
         <video
           autoPlay
           loop
@@ -40,12 +57,12 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
-        {/* Badge */}
+        {/* Badge - hidden on mobile */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-8"
+          className="mb-8 hidden md:block"
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-gray-300 font-medium tracking-wide">
             <span className="w-2 h-2 rounded-full bg-[#E10600] animate-pulse" />
@@ -116,7 +133,7 @@ export default function Hero() {
       <AnimatePresence>
         {showScrollIndicator && (
           <motion.div
-            className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center"
+            className="absolute bottom-[50px] md:bottom-5 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
