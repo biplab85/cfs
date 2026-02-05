@@ -233,7 +233,7 @@ export const siteContent = {
         name: "Ashfaq Rahman Asif",
         role: "Entrepreneur",
         category: "Upcoming",
-        image: "/guests/Asif .jpeg",
+        image: "/guests/Asif.jpg",
         videoUrl: "",
         videoId: "",
         upcoming: true,
