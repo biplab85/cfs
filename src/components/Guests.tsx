@@ -28,11 +28,11 @@ export default function Guests() {
   const [visibleCount, setVisibleCount] = useState(8);
   const [isLoading, setIsLoading] = useState(false);
 
-  // Handle "View More" click - show 14 guests
+  // Handle "View More" click - show 16 guests
   const handleViewMore = () => {
     setIsLoading(true);
     setTimeout(() => {
-      setVisibleCount(14);
+      setVisibleCount(16);
       setIsLoading(false);
     }, 800);
   };
@@ -62,9 +62,9 @@ export default function Guests() {
     : guestsData.filter(guest => guest.category === activeCategory);
 
   const filteredGuests = allFilteredGuests.slice(0, visibleCount);
-  const hasMoreGuests = visibleCount < 14 && visibleCount < allFilteredGuests.length;
-  // Show YouTube button after expanding to 14 guests (or if all guests are already shown)
-  const showYouTubeButton = visibleCount >= 14 || visibleCount >= allFilteredGuests.length;
+  const hasMoreGuests = visibleCount < 16 && visibleCount < allFilteredGuests.length;
+  // Show YouTube button after expanding to 16 guests (or if all guests are already shown)
+  const showYouTubeButton = visibleCount >= 16 || visibleCount >= allFilteredGuests.length;
 
   const cardVariants = {
     hidden: { opacity: 0, y: 60, scale: 0.9 },
