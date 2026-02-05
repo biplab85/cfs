@@ -69,19 +69,21 @@ export default function CTA() {
                 {siteContent.cta.guestDescription}
               </p>
 
-              {/* Button */}
-              <motion.button
-                className="btn-primary rounded-sm w-full sm:w-auto"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+              {/* Contact Email */}
+              <a
+                href="mailto:hello@chilliflakesstudio.com"
+                className="inline-flex items-center gap-3 text-white hover:text-[#E10600] transition-colors duration-300 group"
               >
-                <span className="relative z-10 flex items-center justify-center gap-3">
-                  {siteContent.cta.guestButton}
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                <div className="w-12 h-12 rounded-full bg-[#E10600]/10 border border-[#E10600]/30 flex items-center justify-center group-hover:bg-[#E10600]/20 transition-colors">
+                  <svg className="w-5 h-5 text-[#E10600]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                </span>
-              </motion.button>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-400">Contact us</p>
+                  <p className="text-lg font-medium">hello@chilliflakesstudio.com</p>
+                </div>
+              </a>
 
               {/* Decorative Elements */}
               <div className="absolute top-0 right-0 w-24 h-24 border-t-2 border-r-2 border-[#E10600]/10 rounded-tr-lg" />
