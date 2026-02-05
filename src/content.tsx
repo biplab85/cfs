@@ -190,7 +190,7 @@ export const siteContent = {
       },    
       {
         id: "nahyan",
-        name: "Dr Nahyan ",
+        name: "Dr Nahyan",
         role: "Emergency Specialist",
         category: "Medical",
         image: "/guests/Dr Nahyan.png",

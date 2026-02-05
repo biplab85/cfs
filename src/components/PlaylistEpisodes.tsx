@@ -173,9 +173,9 @@ export default function PlaylistEpisodes() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
             Featured <span className="text-[#E10600]">Videos</span>
           </h2>
-          <p className="mt-4 text-gray-400 text-base md:text-lg">
+          {/* <p className="mt-4 text-gray-400 text-base md:text-lg">
             <span className="text-white font-semibold">{episodes.length}</span> Videos • Playlist ID: <span className="text-[#E10600] font-medium">{PLAYLIST_ID}</span>
-          </p>
+          </p> */}
         </motion.div>
 
         {/* Coverflow Swiper */}
