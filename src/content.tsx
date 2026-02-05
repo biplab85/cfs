@@ -201,7 +201,7 @@ export const siteContent = {
       {
         id: "kishwar",
         name: "Kishwar Chowdhury",
-        role: "Featured Guest",
+        role: "Runner-up Masterchef Australia",
         category: "Upcoming",
         image: "/guests/Kishwar Chowdhury.jpeg",
         videoUrl: "",
@@ -212,7 +212,7 @@ export const siteContent = {
       {
         id: "zohad",
         name: "Zohad",
-        role: "Featured Guest",
+        role: "Vocalist, Nemesis",
         category: "Upcoming",
         image: "/guests/Zohad.jpeg",
         videoUrl: "",
