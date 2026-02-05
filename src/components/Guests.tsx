@@ -440,7 +440,7 @@ export default function Guests() {
                       <h3 className="text-white font-bold text-base md:text-xl leading-tight mb-1 group-hover:text-[#ff4d4d] transition-colors duration-300">
                         {guest.name}
                       </h3>
-                      <p className="text-gray-300 text-xs md:text-sm line-clamp-1 opacity-80">
+                      <p className="text-gray-300 text-xs md:text-sm line-clamp-2 opacity-80">
                         {guest.role}
                       </p>
                     </div>

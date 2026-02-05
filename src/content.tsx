@@ -24,7 +24,7 @@ export const siteContent = {
     Our podcast speaks to the South Asian community not only in Sydney but across the world,
     amplifying voices that deserve to be heard. We bring together thought leaders, artists,
     athletes, and changemakers for conversations that inspire and connect.`,
-    mission: "At Chilliflakes Studio, we believe in bold conversations that matter, dialogues that spark change today and contribute to a better world for tomorrow.",
+    mission: "Chilli Flakes Studio — Bold Conversations. Unheard truths. Unthinkable perspectives.",
   },
 
   stats: [
@@ -65,13 +65,13 @@ export const siteContent = {
   guests: {
     title: "Featured Guests",
     subtitle: "Extraordinary individuals sharing their inspiring stories, insights, and journeys",
-    categories: ["All", "Cricket", "Music", "Medical", "Community", "Featured", "Upcoming"],
+    categories: ["All", "Sports", "Music", "Medical", "Featured", "Upcoming"],
     data: [
       {
         id: "aminul",
         name: "Aminul Islam Bulbul",
         role: "President of BCB",
-        category: "Cricket",
+        category: "Sports",
         image: "/guests/Aminul Islam Bulbul.webp",
         videoUrl: "https://www.youtube.com/watch?v=4gJz7TtLWKs",
         videoId: "4gJz7TtLWKs",
@@ -80,7 +80,7 @@ export const siteContent = {
         id: "khaled",
         name: "Khaled Mashud Pilot",
         role: "Former Captain, Bangladesh Cricket",
-        category: "Cricket",
+        category: "Sports",
         image: "/guests/Khaled Mashud Pilot.jpg",
         videoUrl: "https://www.youtube.com/watch?v=y7B1_N6NB0s",
         videoId: "y7B1_N6NB0s",
@@ -89,7 +89,7 @@ export const siteContent = {
         id: "habibul",
         name: "Habibul Bashar",
         role: "Former Captain, Bangladesh Cricket",
-        category: "Cricket",
+        category: "Sports",
         image: "/guests/Habibul Bashar.jpg",
         videoUrl: "https://www.youtube.com/watch?v=oWwvR9G4QIc",
         videoId: "oWwvR9G4QIc",
@@ -97,7 +97,7 @@ export const siteContent = {
       {
         id: "razaul",
         name: "Razaul Karim Sumon",
-        role: "Featured Guest",
+        role: " Former Military Officer",
         category: "Featured",
         image: "/guests/Razaul Karim Sumon.jpeg",
         videoUrl: "https://www.youtube.com/watch?v=CBiJhXtH8lE",
@@ -106,7 +106,7 @@ export const siteContent = {
       {
         id: "Rafiq",
         name: "Khan Sobayel Bin Rafiq",
-        role: "Featured Guest",
+        role: " Former Military Officer",
         category: "Featured",
         image: "/guests/Khan Sobayel Bin Rafiq.jpeg",
         videoUrl: "https://www.youtube.com/watch?v=CBiJhXtH8lE",
@@ -115,7 +115,7 @@ export const siteContent = {
       {
         id: "imroze",
         name: "Imroze Ahmed",
-        role: "Featured Guest",
+        role: "Senior Vice President, BOA and Former Military Officer",
         category: "Featured",
         image: "/guests/Imroze Ahmed.jpeg",
         videoUrl: "https://www.youtube.com/watch?v=qzF5b08oMLI",
@@ -125,7 +125,7 @@ export const siteContent = {
       {
         id: "tabith",
         name: "Tabith Awal",
-        role: "Featured Guest",
+        role: "President of BFF",
         category: "Upcoming",
         image: "/guests/Tabith Awal.jpeg",
         videoUrl: "",
@@ -145,7 +145,7 @@ export const siteContent = {
       {
         id: "sabrin",
         name: "Dr. Sabrin",
-        role: "Medical Professional",
+        role: "Social Worker",
         category: "Medical",
         image: "/guests/Dr.Sabrin.jpg",
         videoUrl: "https://www.youtube.com/watch?v=1u9pzpplWe4",
@@ -172,12 +172,31 @@ export const siteContent = {
       {
         id: "cezanne",
         name: "Cezanne",
-        role: "Featured Guest",
+        role: "Bassist and co-founder of Artcell",
         category: "Featured",
         image: "/guests/Cezanne.png",
         videoUrl: "https://www.youtube.com/watch?v=cwrlxWBGuEs",
         videoId: "cwrlxWBGuEs",
-      },      
+      },   
+      
+      {
+        id: "tanveer",
+        name: "Tanveer Shaheed",
+        role: " (IEAA- SF) - Director, International Recruitment, Macquarie University - image provided in whatsapp",
+        category: "Featured",
+        image: "/guests/Tanveer Shaheed.jpg",
+        videoUrl: "https://www.youtube.com/watch?v=U1x610rt1qY",
+        videoId: "U1x610rt1qY",
+      },    
+      {
+        id: "nahyan",
+        name: "Dr Nahyan ",
+        role: "Emergency Specialist",
+        category: "Medical",
+        image: "/guests/Dr Nahyan.png",
+        videoUrl: "https://www.youtube.com/watch?v=n3iuo0HEgEg",
+        videoId: "n3iuo0HEgEg",
+      }, 
 
       {
         id: "kishwar",
@@ -200,6 +219,7 @@ export const siteContent = {
         videoId: "",
         upcoming: true,
       },
+         
     ],
   },
 

@@ -5,10 +5,12 @@ import Stats from "@/components/Stats";
 import Guests from "@/components/Guests";
 import Episodes from "@/components/Episodes";
 import PlaylistViewer from "@/components/PlaylistViewer";
+import PlaylistEpisodes from "@/components/PlaylistEpisodes";
 import GlobalReach from "@/components/GlobalReach";
 import About from "@/components/About";
 import Gallery from "@/components/Gallery";
 import Social from "@/components/Social";
+import InstagramGallery from "@/components/InstagramGallery";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -25,9 +27,11 @@ export default function Home() {
       {/* 3. Featured Guests - Prominent personalities */}
       <Guests />
       {/* 4. Latest Episodes - Fresh content */}
-      <Episodes />
+      {/* <Episodes /> */}
+      {/* Playlist Episodes - Videos from specific playlist */}
+      <PlaylistEpisodes />
       {/* Playlist Viewer - Full episode playlist */}
-      <PlaylistViewer />
+      {/* <PlaylistViewer /> */}
       {/* 5. Global Reach - International audience */}
       <GlobalReach />
       {/* 6. Our Story - Background and mission */}
@@ -35,8 +39,10 @@ export default function Home() {
       {/* 7. Media Gallery - Visual highlights */}
       <Gallery />
       {/* Desktop Feature Section - Desktop view only */}
-      
+
       <Social />
+      {/* Instagram Gallery - Latest posts from Instagram */}
+      {/* <InstagramGallery /> */}
       {/* 9. Call-to-Action */}
       <CTA />
       {/* 10. Footer */}

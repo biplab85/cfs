@@ -9,7 +9,7 @@ interface PlaylistVideo {
   thumbnail: string;
 }
 
-const PLAYLIST_ID = "PLBxZq9sogFVWuIOXCw4rObKYjQrf8Tlf_";
+const PLAYLIST_ID = "PLBxZq9sogFVVjfeKvXd51MLW3FiKPZz_K";
 
 // Animated Equalizer Component
 function AudioEqualizer() {
