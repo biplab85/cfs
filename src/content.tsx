@@ -111,7 +111,7 @@ export const siteContent = {
         image: "/guests/Khan Sobayel Bin Rafiq.jpeg",
         videoUrl: "https://www.youtube.com/watch?v=CBiJhXtH8lE",
         videoId: "CBiJhXtH8lE",
-      },   
+      },
       {
         id: "imroze",
         name: "Imroze Ahmed",
@@ -120,8 +120,8 @@ export const siteContent = {
         image: "/guests/Imroze Ahmed.jpeg",
         videoUrl: "https://www.youtube.com/watch?v=qzF5b08oMLI",
         videoId: "qzF5b08oMLI",
-      }, 
-      
+      },
+
       {
         id: "tabith",
         name: "Tabith Awal",
@@ -132,7 +132,7 @@ export const siteContent = {
         videoId: "",
         upcoming: true,
       },
-      
+
       {
         id: "hamin",
         name: "Hamin Ahmed",
@@ -177,8 +177,8 @@ export const siteContent = {
         image: "/guests/Cezanne.png",
         videoUrl: "https://www.youtube.com/watch?v=cwrlxWBGuEs",
         videoId: "cwrlxWBGuEs",
-      },   
-      
+      },
+
       {
         id: "tanveer",
         name: "Tanveer Shaheed",
@@ -187,7 +187,7 @@ export const siteContent = {
         image: "/guests/Tanveer Shaheed.jpg",
         videoUrl: "https://www.youtube.com/watch?v=U1x610rt1qY",
         videoId: "U1x610rt1qY",
-      },    
+      },
       {
         id: "nahyan",
         name: "Dr Nahyan",
@@ -196,7 +196,7 @@ export const siteContent = {
         image: "/guests/Dr Nahyan.png",
         videoUrl: "https://www.youtube.com/watch?v=n3iuo0HEgEg",
         videoId: "n3iuo0HEgEg",
-      }, 
+      },
 
       {
         id: "kishwar",
@@ -208,7 +208,7 @@ export const siteContent = {
         videoId: "",
         upcoming: true,
       },
-      
+
       {
         id: "zohad",
         name: "Zohad",
@@ -219,7 +219,26 @@ export const siteContent = {
         videoId: "",
         upcoming: true,
       },
-         
+      {
+        id: "shafqat",
+        name: "AVM Shafqat Ali (R)",
+        role: "Entrepreneur",
+        category: "Upcoming",
+        image: "/guests/Ashfaq.jpeg",
+        videoUrl: "https://www.youtube.com/watch?v=n3iuo0HEgEg",
+        videoId: "n3iuo0HEgEg",
+      },
+      {
+        id: "asif",
+        name: "Ashfaq Rahman Asif",
+        role: "Entrepreneur",
+        category: "Upcoming",
+        image: "/guests/Asif .jpeg",
+        videoUrl: "",
+        videoId: "",
+        upcoming: true,
+      },
+
     ],
   },
 
