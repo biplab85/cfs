@@ -24,7 +24,7 @@ export default function Navigation() {
 
   // Track active section on scroll
   const updateActiveSection = useCallback(() => {
-    const sections = ["stats", "guests", "playlist-episodes", "reach", "about", "gallery", "contact"];
+    const sections = ["stats", "guests", "playlist-episodes", "reach", "about", "local-gallery", "contact"];
     const scrollPosition = window.scrollY + 150; // Offset for header height
 
     for (const section of sections) {
@@ -71,7 +71,7 @@ export default function Navigation() {
     { label: "Episodes", href: "#playlist-episodes" },
     { label: "Global Reach", href: "#reach" },
     { label: "Our Story", href: "#about" },
-    { label: "Gallery", href: "#gallery" },
+    { label: "Gallery", href: "#local-gallery" },
     { label: "Contact", href: "#contact" },
   ];
 

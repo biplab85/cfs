@@ -9,6 +9,7 @@ import PlaylistEpisodes from "@/components/PlaylistEpisodes";
 import GlobalReach from "@/components/GlobalReach";
 import About from "@/components/About";
 import Gallery from "@/components/Gallery";
+import LocalGallery from "@/components/LocalGallery";
 import Social from "@/components/Social";
 import InstagramGallery from "@/components/InstagramGallery";
 import CTA from "@/components/CTA";
@@ -37,7 +38,9 @@ export default function Home() {
       {/* 6. Our Story - Background and mission */}
       <About />
       {/* 7. Media Gallery - Visual highlights */}
-      <Gallery />
+      {/* <Gallery /> */}
+      {/* Local Gallery - Behind the scenes from local images */}
+      <LocalGallery />
       {/* Desktop Feature Section - Desktop view only */}
 
       <Social />
