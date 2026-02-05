@@ -121,9 +121,9 @@ export default function CTA() {
                 {siteContent.cta.subscribeDescription}
               </p>
 
-              {/* Button */}
+              {/* Button - Direct redirect to YouTube */}
               <motion.button
-                onClick={() => setShowSubscribeModal(true)}
+                onClick={handleSubscribe}
                 className="relative inline-block bg-white text-[#E10600] font-heading font-semibold text-sm tracking-widest uppercase px-8 py-4 rounded-sm w-full sm:w-auto hover:bg-gray-100 transition-colors cursor-pointer"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}

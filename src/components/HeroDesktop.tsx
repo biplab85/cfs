@@ -106,7 +106,7 @@ export default function HeroDesktop() {
             </motion.a>
 
             <motion.a
-              href={siteContent.hero.facebookUrl}
+              href="#contact"
               className="group inline-flex items-center justify-center gap-2 sm:gap-3 w-full sm:w-auto px-6 sm:px-7 py-2 sm:py-3 bg-white/5 backdrop-blur-md text-white font-semibold text-base sm:text-lg rounded-lg border border-white/20 transition-all duration-300 hover:bg-white/10 hover:border-white/40"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
