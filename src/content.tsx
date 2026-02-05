@@ -224,7 +224,7 @@ export const siteContent = {
         name: "AVM Shafqat Ali (R)",
         role: "Entrepreneur",
         category: "Featured",
-        image: "/guests/AVM Shafqat Ali .jpeg",
+        image: "/guests/AVM Shafqat Ali .png",
         videoUrl: "https://www.youtube.com/watch?v=n3iuo0HEgEg",
         videoId: "n3iuo0HEgEg",
       },
