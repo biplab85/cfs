@@ -71,7 +71,7 @@ export default function CTA() {
 
               {/* Contact Email */}
               <a
-                href="mailto:hello@chilliflakesstudio.com"
+                href="mailto:thechilliflakesstudio@gmail.com"
                 className="inline-flex items-center gap-3 text-white hover:text-[#E10600] transition-colors duration-300 group"
               >
                 <div className="w-12 h-12 rounded-full bg-[#E10600]/10 border border-[#E10600]/30 flex items-center justify-center group-hover:bg-[#E10600]/20 transition-colors">
@@ -81,7 +81,7 @@ export default function CTA() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-400">Contact us</p>
-                  <p className="text-lg font-medium">hello@chilliflakesstudio.com</p>
+                  <p className="text-lg font-medium">thechilliflakesstudio@gmail.com</p>
                 </div>
               </a>
 

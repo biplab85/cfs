@@ -65,7 +65,7 @@ export const siteContent = {
   guests: {
     title: "Featured Guests",
     subtitle: "Extraordinary individuals sharing their inspiring stories, insights, and journeys",
-    categories: ["All", "Sports", "Music", "Medical", "Education", "Defence", "Featured", "Upcoming"],
+    categories: ["All", "Sports", "Music", "Medical", "Education", "Defence", "Featured", "Upcoming", "Community Advocate"],
     data: [
       {
         id: "aminul",
@@ -116,7 +116,7 @@ export const siteContent = {
         id: "imroze",
         name: "Imroze Ahmed",
         role: "Senior Vice President, BOA and Former Military Officer",
-        category: "Featured",
+        category: "Defence",
         image: "/guests/Imroze Ahmed.jpeg",
         videoUrl: "https://www.youtube.com/watch?v=qzF5b08oMLI",
         videoId: "qzF5b08oMLI",
@@ -146,7 +146,7 @@ export const siteContent = {
         id: "sabrin",
         name: "Dr. Sabrin",
         role: "Social Worker",
-        category: "Medical",
+        category: "Community Advocate",
         image: "/guests/Dr.Sabrin.jpg",
         videoUrl: "https://www.youtube.com/watch?v=1u9pzpplWe4",
         videoId: "1u9pzpplWe4",
@@ -223,7 +223,7 @@ export const siteContent = {
         id: "shafqat",
         name: "AVM Shafqat Ali (R)",
         role: "Entrepreneur",
-        category: "Featured",
+        category: "Defence",
         image: "/guests/AVM Shafqat Ali .png",
         videoUrl: "https://www.youtube.com/watch?v=zcEBr5Xvcio",
         videoId: "zcEBr5Xvcio",
