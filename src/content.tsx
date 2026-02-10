@@ -11,7 +11,7 @@ export const siteContent = {
 
   hero: {
     headline: "Where Stories Ignite",
-    subheadline: "Sydney's leading podcast amplifying South Asian voices across the globe",
+    subheadline: "Sydney’s leading podcast amplifying diverse voices and global perspectives",
     ctaYoutube: "Watch on YouTube",
     ctaFacebook: "Be Our Next Guest",
     youtubeUrl: "https://youtube.com/@chilliflakesstudio",
@@ -20,10 +20,7 @@ export const siteContent = {
 
   about: {
     title: "Our Story",
-    content: `Chilliflakes Studio is a Sydney-based podcast channel created for the South Asian diaspora.
-    Our podcast speaks to the South Asian community not only in Sydney but across the world,
-    amplifying voices that deserve to be heard. We bring together thought leaders, artists,
-    athletes, and changemakers for conversations that inspire and connect.`,
+    content: ` Chilliflakes Studio is a Sydney-based podcast platform sharing powerful stories and global perspectives. We host thought leaders, artists, athletes, and changemakers for conversations that inspire and connect across borders.`,
     mission: "Chilli Flakes Studio — Bold Conversations. Unheard truths. Unthinkable perspectives.",
   },
 
@@ -144,7 +141,7 @@ export const siteContent = {
       },
       {
         id: "sabrin",
-        name: "Dr. Sabrin",
+        name: "Dr. Sabrin Farooqi",
         role: "Social Worker",
         category: "Community Advocate",
         image: "/guests/Dr.Sabrin.jpg",
@@ -171,7 +168,7 @@ export const siteContent = {
       // },
       {
         id: "cezanne",
-        name: "Cezanne",
+        name: "Saef Al Nazi Cezanne",
         role: "Bassist and co-founder of Artcell",
         category: "Music",
         image: "/guests/Cezanne.png",
@@ -190,7 +187,7 @@ export const siteContent = {
       },
       {
         id: "nahyan",
-        name: "Dr Nahyan",
+        name: "Dr. Nahyan Kabir",
         role: "Emergency Specialist",
         category: "Medical",
         image: "/guests/Dr Nahyan.png",
@@ -211,7 +208,7 @@ export const siteContent = {
 
       {
         id: "zohad",
-        name: "Zohad",
+        name: "Md. Zohad Reza Chowdhury",
         role: "Vocalist, Nemesis",
         category: "Upcoming",
         image: "/guests/Zohad.jpeg",

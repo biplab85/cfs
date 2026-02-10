@@ -12,6 +12,7 @@ import Gallery from "@/components/Gallery";
 import LocalGallery from "@/components/LocalGallery";
 import Social from "@/components/Social";
 import InstagramGallery from "@/components/InstagramGallery";
+import Sponsor from "@/components/Sponsor";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -35,6 +36,8 @@ export default function Home() {
       {/* <PlaylistViewer /> */}
       {/* 5. Global Reach - International audience */}
       <GlobalReach />
+       {/* Sponsors - Brand partners */}
+      <Sponsor />
       {/* 6. Our Story - Background and mission */}
       <About />
       {/* 7. Media Gallery - Visual highlights */}
@@ -46,6 +49,7 @@ export default function Home() {
       <Social />
       {/* Instagram Gallery - Latest posts from Instagram */}
       {/* <InstagramGallery /> */}
+
       {/* 9. Call-to-Action */}
       <CTA />
       {/* 10. Footer */}

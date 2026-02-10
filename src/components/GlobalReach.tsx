@@ -79,7 +79,7 @@ export default function GlobalReach() {
             {siteContent.audience.title}
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Our voices resonate across continents, connecting South Asian communities worldwide
+            Our voices resonate across continents, connecting stories, cultures, and communities worldwide.
           </p>
         </motion.div>
 
