@@ -10,6 +10,16 @@ const sponsors = [
     logo: "/sponsor/PLATINUM-GRAND-LOGO.png",
   },
   {
+    id: "waasey",
+    name: "Waasey",
+    logo: "/sponsor/waasey.png",
+  },
+  {
+    id: "hirae-co",
+    name: "Hirae & Co",
+    logo: "/sponsor/hirae&co.png",
+  },
+  {
     id: "younus-group",
     name: "Younus Group",
     logo: "/sponsor/younus-group.png",
@@ -29,16 +39,7 @@ const sponsors = [
     name: "Osmo",
     logo: "/sponsor/osmo.png",
   },
-  {
-    id: "waasey",
-    name: "Waasey",
-    logo: "/sponsor/waasey.png",
-  },
-  {
-    id: "hirae-co",
-    name: "Hirae & Co",
-    logo: "/sponsor/hirae&co.png",
-  },
+
 ];
 
 export default function Sponsor() {
@@ -260,9 +261,8 @@ export default function Sponsor() {
                 <img
                   src={sponsor.logo}
                   alt={sponsor.name}
-                  className={`relative z-10 object-contain grayscale invert opacity-60 group-hover:grayscale-0 group-hover:invert-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110 ${
-                    sponsor.id === "jago-corporation" ? "max-w-[95%] max-h-[95%]" : "max-w-[80%] max-h-[80%]"
-                  }`}
+                  className={`relative z-10 object-contain grayscale invert opacity-60 group-hover:grayscale-0 group-hover:invert-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110 ${sponsor.id === "jago-corporation" ? "max-w-[95%] max-h-[95%]" : "max-w-[80%] max-h-[80%]"
+                    }`}
                 />
 
                 {/* Corner Decorations */}
@@ -291,9 +291,8 @@ export default function Sponsor() {
                 <img
                   src={sponsor.logo}
                   alt={sponsor.name}
-                  className={`relative z-10 object-contain transition-all duration-500 group-hover:scale-110 ${
-                    sponsor.id === "jago-corporation" ? "max-w-[95%] max-h-[95%]" : "max-w-[80%] max-h-[80%]"
-                  }`}
+                  className={`relative z-10 object-contain transition-all duration-500 group-hover:scale-110 ${sponsor.id === "jago-corporation" ? "max-w-[95%] max-h-[95%]" : "max-w-[80%] max-h-[80%]"
+                    }`}
                 />
 
                 {/* Corner Decorations */}
