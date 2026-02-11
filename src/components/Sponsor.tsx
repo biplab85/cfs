@@ -227,16 +227,11 @@ export default function Sponsor() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <motion.span
-            className="inline-block px-4 py-1.5 rounded-full bg-[#E10600]/10 border border-[#E10600]/20 text-[#E10600] text-xs font-semibold tracking-wider uppercase mb-4"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ delay: 0.2 }}
-          >
+          <span className="inline-block font-heading text-sm tracking-[0.3em] text-[#E10600] uppercase mb-4">
             Our Partners
-          </motion.span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-            Proud <span className="bg-gradient-to-r from-[#E10600] to-[#ff4d4d] bg-clip-text text-transparent">Sponsors</span>
+          </span>
+          <h2 className="font-display text-section text-white">
+            Proud <span className="text-[#E10600]">Sponsors</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Backed by amazing brands who believe in amplifying South Asian voices

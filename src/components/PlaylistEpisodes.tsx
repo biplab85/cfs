@@ -167,10 +167,11 @@ export default function PlaylistEpisodes() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-block text-[#E10600] text-sm font-medium tracking-[0.2em] uppercase mb-3">
+
+          <span className="inline-block font-heading text-sm tracking-[0.3em] text-[#E10600] uppercase mb-4">
             Watch Now
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+          <h2 className="font-display text-section text-white">
             Featured <span className="text-[#E10600]">Videos</span>
           </h2>
           {/* <p className="mt-4 text-gray-400 text-base md:text-lg">
@@ -265,9 +266,8 @@ export default function PlaylistEpisodes() {
                     href={`https://www.youtube.com/watch?v=${episode.id}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`block transition-all duration-500 ${
-                      isActive ? "scale-100" : "scale-[0.85] opacity-50"
-                    }`}
+                    className={`block transition-all duration-500 ${isActive ? "scale-100" : "scale-[0.85] opacity-50"
+                      }`}
                   >
                     <div className="relative group">
                       {/* Video Thumbnail */}
@@ -278,9 +278,8 @@ export default function PlaylistEpisodes() {
                         <div className="absolute inset-0 bg-[#E10600]/0 group-hover:bg-[#E10600]/10 transition-colors duration-500" />
 
                         {/* Play Button */}
-                        <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${
-                          isActive ? "opacity-100" : "opacity-0"
-                        }`}>
+                        <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${isActive ? "opacity-100" : "opacity-0"
+                          }`}>
                           <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#E10600] flex items-center justify-center shadow-[0_0_50px_rgba(225,6,0,0.6)] group-hover:scale-110 group-hover:shadow-[0_0_70px_rgba(225,6,0,0.7)] transition-all duration-300">
                             <svg className="w-8 h-8 md:w-10 md:h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
                               <path d="M8 5v14l11-7z" />
@@ -292,9 +291,8 @@ export default function PlaylistEpisodes() {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
 
                         {/* Title Overlay */}
-                        <div className={`absolute bottom-0 left-0 right-0 p-5 md:p-8 transition-opacity duration-300 ${
-                          isActive ? "opacity-100" : "opacity-0"
-                        }`}>
+                        <div className={`absolute bottom-0 left-0 right-0 p-5 md:p-8 transition-opacity duration-300 ${isActive ? "opacity-100" : "opacity-0"
+                          }`}>
                           <h3 className="text-white font-semibold text-base md:text-xl line-clamp-2 drop-shadow-lg">
                             {episode.title}
                           </h3>
@@ -322,7 +320,7 @@ export default function PlaylistEpisodes() {
             className="inline-flex items-center gap-2 px-6 py-3 bg-[#E10600] text-white font-medium rounded-full hover:bg-[#ff1a1a] transition-colors duration-300"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
             </svg>
             View All Episodes
           </a>

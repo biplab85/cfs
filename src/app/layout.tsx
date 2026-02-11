@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     title: "Chilli Flakes Studio",
     description: "Bold conversations that matter. Sydney's leading podcast for the South Asian diaspora.",
   },
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
