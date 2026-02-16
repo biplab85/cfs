@@ -219,7 +219,7 @@ export const siteContent = {
       {
         id: "shafqat",
         name: "AVM Shafqat Ali (R)",
-        role: "Entrepreneur",
+        role: "Former Air Force officer",
         category: "Defense",
         image: "/guests/AVM Shafqat Ali .png",
         videoUrl: "https://www.youtube.com/watch?v=zcEBr5Xvcio",
@@ -313,7 +313,8 @@ export const siteContent = {
 
   footer: {
     copyright: `© ${new Date().getFullYear()} Chilli Flakes Studio. All rights reserved.`,
-    tagline: "Amplifying South Asian Voices from Sydney to the World",
+    //tagline: "Amplifying South Asian Voices from Sydney to the World",
+    tagline: "Bold Conversations. Unheard truths. Unthinkable perspectives",
     links: [
       { label: "Privacy Policy", url: "#" },
       { label: "Terms of Service", url: "#" },
@@ -321,5 +322,6 @@ export const siteContent = {
     ],
   },
 };
+
 
 export type SiteContent = typeof siteContent;
