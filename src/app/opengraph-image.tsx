@@ -8,7 +8,7 @@ export const contentType = "image/png";
 
 export default async function Image() {
   const logoData = await readFile(
-    join(process.cwd(), "public", "cfs revise 2.png")
+    join(process.cwd(), "public", "cfs-logo.png")
   );
   const logoSrc = `data:image/png;base64,${logoData.toString("base64")}`;
 

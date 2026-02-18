@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cfs-rho.vercel.app"),
   title: "Chilli Flakes Studio | Sydney's Premier South Asian Podcast",
   description: "Bold conversations that matter. Sydney-based podcast amplifying South Asian voices across the globe. Featuring interviews with cricketers, musicians, and thought leaders.",
   keywords: ["podcast", "South Asian", "Sydney", "Bangladesh", "cricket", "music", "diaspora", "interviews"],
