@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-export const alt = "Chilli Flakes Studio";
+export const alt = "Chilli Flakes Studio Logo";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -30,7 +30,7 @@ export default async function Image() {
           src={logoSrc}
           width={700}
           height={367}
-          alt="Chilli Flakes Studio"
+          alt="Chilli Flakes Studio Logo"
         />
       </div>
     ),
