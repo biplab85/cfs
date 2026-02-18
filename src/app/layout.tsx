@@ -2,21 +2,21 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cfs-rho.vercel.app"),
   title: "Chilli Flakes Studio | Sydney's Premier South Asian Podcast",
   description: "Bold conversations that matter. Sydney-based podcast amplifying South Asian voices across the globe. Featuring interviews with cricketers, musicians, and thought leaders.",
   keywords: ["podcast", "South Asian", "Sydney", "Bangladesh", "cricket", "music", "diaspora", "interviews"],
   authors: [{ name: "Chilli Flakes Studio" }],
   openGraph: {
     title: "Chilli Flakes Studio",
-    description: "Bold conversations that matter. Sydney's leading podcast for the South Asian diaspora.",
     type: "website",
     locale: "en_AU",
     siteName: "Chilli Flakes Studio",
+    url: "https://cfs-rho.vercel.app",
   },
   twitter: {
     card: "summary_large_image",
     title: "Chilli Flakes Studio",
-    description: "Bold conversations that matter. Sydney's leading podcast for the South Asian diaspora.",
   },
   icons: {
     icon: "/favicon.png",
