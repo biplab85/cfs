@@ -8,7 +8,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Chilli Flakes Studio" }],
   openGraph: {
     title: "Chilli Flakes Studio",
-    description: "Bold conversations that matter. Sydney's leading podcast for the South Asian diaspora.",
     type: "website",
     locale: "en_AU",
     siteName: "Chilli Flakes Studio",
@@ -17,7 +16,6 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Chilli Flakes Studio",
-    description: "Bold conversations that matter. Sydney's leading podcast for the South Asian diaspora.",
   },
   icons: {
     icon: "/favicon.png",
