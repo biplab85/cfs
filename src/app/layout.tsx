@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_AU",
     siteName: "Chilli Flakes Studio",
+    url: "https://cfs-rho.vercel.app",
   },
   twitter: {
     card: "summary_large_image",
