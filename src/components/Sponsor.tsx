@@ -234,7 +234,7 @@ export default function Sponsor() {
             Proud <span className="text-[#E10600]">Sponsors</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Backed by amazing brands who believe in amplifying South Asian voices
+            Backed by amazing brands who believe in voices that matter
           </p>
         </motion.div>
 
