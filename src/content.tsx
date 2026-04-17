@@ -26,22 +26,22 @@ export const siteContent = {
 
   stats: [
     {
-      value: "20K+",
+      value: "35K+",
       label: "Facebook Followers",
       description: "Growing community",
     },
     {
-      value: "2M+",
+      value: "5.4M+",
       label: "Total Views",
       description: "Across META platforms",
     },
     {
-      value: "3.61K+",
+      value: "4.30K+",
       label: "YouTube Subscribers",
       description: "And counting",
     },
     {
-      value: "142K+",
+      value: "231K+",
       label: "YouTube Views",
       description: "Engaged audience",
     },
@@ -125,9 +125,9 @@ export const siteContent = {
         role: "President of BFF",
         category: "Upcoming",
         image: "/guests/Tabith Awal.jpeg",
-        videoUrl: "",
-        videoId: "",
-        upcoming: true,
+        videoUrl: "https://www.youtube.com/watch?v=j_pO9OuJEwo",
+        videoId: "j_pO9OuJEwo",
+        //upcoming: true,
       },
 
       {
@@ -201,9 +201,9 @@ export const siteContent = {
         role: "Runner-up Masterchef Australia",
         category: "Upcoming",
         image: "/guests/Kishwar Chowdhury.jpeg",
-        videoUrl: "",
-        videoId: "",
-        upcoming: true,
+        videoUrl: "https://www.youtube.com/watch?v=KBcqPSEC17k",
+        videoId: "KBcqPSEC17k",
+        //upcoming: true,
       },
 
       {
@@ -231,9 +231,9 @@ export const siteContent = {
         role: "Entrepreneur",
         category: "Upcoming",
         image: "/guests/Asif.jpg",
-        videoUrl: "",
-        videoId: "",
-        upcoming: true,
+        videoUrl: "https://www.youtube.com/watch?v=mEiZtXjCTJg",
+        videoId: "mEiZtXjCTJg",
+        //upcoming: true,
       },
 
     ],
@@ -278,13 +278,13 @@ export const siteContent = {
       {
         name: "Facebook",
         url: "https://www.facebook.com/profile.php?id=61577216227183",
-        followers: "20K+",
+        followers: "35K+",
         icon: "facebook",
       },
       {
         name: "YouTube",
         url: "https://www.youtube.com/@chilliflakesstudio",
-        followers: "3.61K",
+        followers: "4.30K",
         icon: "youtube",
       },
       {
