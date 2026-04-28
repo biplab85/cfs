@@ -11,7 +11,8 @@ export const siteContent = {
 
   hero: {
     headline: "Where Stories Ignite",
-    subheadline: "Sydney’s leading podcast amplifying diverse voices and global perspectives",
+    subheadline:
+      "Sydney’s leading podcast amplifying diverse voices and global perspectives",
     ctaYoutube: "Watch on YouTube",
     ctaFacebook: "Be Our Next Guest",
     youtubeUrl: "https://youtube.com/@chilliflakesstudio",
@@ -21,7 +22,8 @@ export const siteContent = {
   about: {
     title: "Our Story",
     content: ` Chilliflakes Studio is a Sydney-based podcast platform sharing powerful stories and global perspectives. We host thought leaders, artists, athletes, and changemakers for conversations that inspire and connect across borders.`,
-    mission: "Chilli Flakes Studio — Bold Conversations. Unheard truths. Unthinkable perspectives.",
+    mission:
+      "Chilli Flakes Studio — Bold Conversations. Unheard truths. Unthinkable perspectives.",
   },
 
   stats: [
@@ -61,8 +63,18 @@ export const siteContent = {
 
   guests: {
     title: "Featured Guests",
-    subtitle: "Extraordinary individuals sharing their inspiring stories, insights, and journeys",
-    categories: ["All", "Sports", "Music", "Medical", "Education", "Defense", "Upcoming", "Community Advocate"],
+    subtitle:
+      "Extraordinary individuals sharing their inspiring stories, insights, and journeys",
+    categories: [
+      "All",
+      "Sports",
+      "Music",
+      "Medical",
+      "Education",
+      "Defense",
+      "Upcoming",
+      "Community Advocate",
+    ],
     data: [
       {
         id: "aminul",
@@ -226,6 +238,15 @@ export const siteContent = {
         videoId: "zcEBr5Xvcio",
       },
       {
+        id: "jamil",
+        name: " Maj Gen Jamil Ahsan",
+        role: "Bir Protik",
+        category: "Defense",
+        image: "/guests/Major General, Jamil D Ahsan.jpeg",
+        videoUrl: "https://www.youtube.com/watch?v=xCvByADV8RM",
+        videoId: "xCvByADV8RM",
+      },
+      {
         id: "asif",
         name: "Ashfaq Rahman Asif",
         role: "Entrepreneur",
@@ -235,7 +256,6 @@ export const siteContent = {
         videoId: "mEiZtXjCTJg",
         //upcoming: true,
       },
-
     ],
   },
 
@@ -246,7 +266,8 @@ export const siteContent = {
       {
         title: "Cricket & Leadership with Aminul Islam Bulbul",
         thumbnail: "/episodes/ep1.jpg",
-        description: "An in-depth conversation about the future of Bangladesh cricket",
+        description:
+          "An in-depth conversation about the future of Bangladesh cricket",
         views: "120K",
         platform: "Facebook",
       },
@@ -260,7 +281,8 @@ export const siteContent = {
       {
         title: "Behind the Music: Artcell's Story",
         thumbnail: "/episodes/ep3.jpg",
-        description: "The untold story of Bangladesh's progressive metal pioneers",
+        description:
+          "The untold story of Bangladesh's progressive metal pioneers",
         views: "88K",
         platform: "Facebook",
       },
@@ -322,6 +344,5 @@ export const siteContent = {
     ],
   },
 };
-
 
 export type SiteContent = typeof siteContent;
