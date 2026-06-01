@@ -247,6 +247,15 @@ export const siteContent = {
         videoId: "xCvByADV8RM",
       },
       {
+        id: "hasinur",
+        name: "BG Hasinur Rahman",
+        role: "Bir Protik",
+        category: "Defense",
+        image: "/guests/Hasinur Rahman.jpeg",
+        videoUrl: "https://www.youtube.com/watch?v=UeiubCh1j6A",
+        videoId: "UeiubCh1j6A",
+      },
+      {
         id: "asif",
         name: "Ashfaq Rahman Asif",
         role: "Entrepreneur",
@@ -255,6 +264,16 @@ export const siteContent = {
         videoUrl: "https://www.youtube.com/watch?v=mEiZtXjCTJg",
         videoId: "mEiZtXjCTJg",
         //upcoming: true,
+      },
+      {
+        id: "pavel",
+        name: "Dr. Mohammad Pavel ",
+        role: "Emergency Medicine Specialist",
+        category: "Medical",
+        image: "/guests/Dr. Mohammad Pavel .jpeg",
+        videoUrl: "https://www.youtube.com/watch?v=ZBHpB3FsXfQ",
+        videoId: "ZBHpB3FsXfQ",
+        upcoming: true,
       },
     ],
   },
@@ -306,7 +325,7 @@ export const siteContent = {
       {
         name: "YouTube",
         url: "https://www.youtube.com/@chilliflakesstudio",
-        followers: "4.30K",
+        followers: "6K",
         icon: "youtube",
       },
       {
