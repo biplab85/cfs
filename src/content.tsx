@@ -269,7 +269,7 @@ export const siteContent = {
         id: "pavel",
         name: "Dr. Mohammad Pavel ",
         role: "Emergency Medicine Specialist",
-        category: "Medical",
+        category: "Upcoming",
         image: "/guests/Dr. Mohammad Pavel .jpeg",
         videoUrl: "https://www.youtube.com/watch?v=ZBHpB3FsXfQ",
         videoId: "ZBHpB3FsXfQ",
