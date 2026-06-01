@@ -11,7 +11,8 @@ export const siteContent = {
 
   hero: {
     headline: "Where Stories Ignite",
-    subheadline: "Sydney’s leading podcast amplifying diverse voices and global perspectives",
+    subheadline:
+      "Sydney’s leading podcast amplifying diverse voices and global perspectives",
     ctaYoutube: "Watch on YouTube",
     ctaFacebook: "Be Our Next Guest",
     youtubeUrl: "https://youtube.com/@chilliflakesstudio",
@@ -21,27 +22,28 @@ export const siteContent = {
   about: {
     title: "Our Story",
     content: ` Chilliflakes Studio is a Sydney-based podcast platform sharing powerful stories and global perspectives. We host thought leaders, artists, athletes, and changemakers for conversations that inspire and connect across borders.`,
-    mission: "Chilli Flakes Studio — Bold Conversations. Unheard truths. Unthinkable perspectives.",
+    mission:
+      "Chilli Flakes Studio — Bold Conversations. Unheard truths. Unthinkable perspectives.",
   },
 
   stats: [
     {
-      value: "20K+",
+      value: "35K+",
       label: "Facebook Followers",
       description: "Growing community",
     },
     {
-      value: "2M+",
+      value: "6M+",
       label: "Total Views",
       description: "Across META platforms",
     },
     {
-      value: "3.61K+",
+      value: "4.50K+",
       label: "YouTube Subscribers",
       description: "And counting",
     },
     {
-      value: "142K+",
+      value: "300K+",
       label: "YouTube Views",
       description: "Engaged audience",
     },
@@ -61,8 +63,18 @@ export const siteContent = {
 
   guests: {
     title: "Featured Guests",
-    subtitle: "Extraordinary individuals sharing their inspiring stories, insights, and journeys",
-    categories: ["All", "Sports", "Music", "Medical", "Education", "Defense", "Upcoming", "Community Advocate"],
+    subtitle:
+      "Extraordinary individuals sharing their inspiring stories, insights, and journeys",
+    categories: [
+      "All",
+      "Sports",
+      "Music",
+      "Medical",
+      "Education",
+      "Defense",
+      "Upcoming",
+      "Community Advocate",
+    ],
     data: [
       {
         id: "aminul",
@@ -123,11 +135,11 @@ export const siteContent = {
         id: "tabith",
         name: "Tabith Awal",
         role: "President of BFF",
-        category: "Upcoming",
+        category: "Sports",
         image: "/guests/Tabith Awal.jpeg",
-        videoUrl: "",
-        videoId: "",
-        upcoming: true,
+        videoUrl: "https://www.youtube.com/watch?v=j_pO9OuJEwo",
+        videoId: "j_pO9OuJEwo",
+        //upcoming: true,
       },
 
       {
@@ -199,18 +211,18 @@ export const siteContent = {
         id: "kishwar",
         name: "Kishwar Chowdhury",
         role: "Runner-up Masterchef Australia",
-        category: "Upcoming",
+        category: "Hospitality",
         image: "/guests/Kishwar Chowdhury.jpeg",
-        videoUrl: "",
-        videoId: "",
-        upcoming: true,
+        videoUrl: "https://www.youtube.com/watch?v=KBcqPSEC17k",
+        videoId: "KBcqPSEC17k",
+        //upcoming: true,
       },
 
       {
         id: "zohad",
         name: "Md. Zohad Reza Chowdhury",
         role: "Vocalist, Nemesis",
-        category: "MUSIC",
+        category: "Music",
         image: "/guests/Zohad.jpeg",
         videoUrl: "https://www.youtube.com/watch?v=ZBHpB3FsXfQ",
         videoId: "ZBHpB3FsXfQ",
@@ -226,16 +238,43 @@ export const siteContent = {
         videoId: "zcEBr5Xvcio",
       },
       {
+        id: "jamil",
+        name: " Maj Gen Jamil Ahsan",
+        role: "Bir Protik",
+        category: "Defense",
+        image: "/guests/Major General, Jamil D Ahsan.jpeg",
+        videoUrl: "https://www.youtube.com/watch?v=xCvByADV8RM",
+        videoId: "xCvByADV8RM",
+      },
+      {
+        id: "hasinur",
+        name: "BG Hasinur Rahman",
+        role: "Bir Protik",
+        category: "Defense",
+        image: "/guests/Hasinur Rahman.jpeg",
+        videoUrl: "https://www.youtube.com/watch?v=UeiubCh1j6A",
+        videoId: "UeiubCh1j6A",
+      },
+      {
         id: "asif",
         name: "Ashfaq Rahman Asif",
         role: "Entrepreneur",
-        category: "Upcoming",
+        category: "Hospitality",
         image: "/guests/Asif.jpg",
-        videoUrl: "",
-        videoId: "",
+        videoUrl: "https://www.youtube.com/watch?v=mEiZtXjCTJg",
+        videoId: "mEiZtXjCTJg",
+        //upcoming: true,
+      },
+      {
+        id: "pavel",
+        name: "Dr. Mohammad Pavel ",
+        role: "Emergency Medicine Specialist",
+        category: "Upcoming",
+        image: "/guests/Dr. Mohammad Pavel .jpeg",
+        videoUrl: "https://www.youtube.com/watch?v=ZBHpB3FsXfQ",
+        videoId: "ZBHpB3FsXfQ",
         upcoming: true,
       },
-
     ],
   },
 
@@ -246,7 +285,8 @@ export const siteContent = {
       {
         title: "Cricket & Leadership with Aminul Islam Bulbul",
         thumbnail: "/episodes/ep1.jpg",
-        description: "An in-depth conversation about the future of Bangladesh cricket",
+        description:
+          "An in-depth conversation about the future of Bangladesh cricket",
         views: "120K",
         platform: "Facebook",
       },
@@ -260,7 +300,8 @@ export const siteContent = {
       {
         title: "Behind the Music: Artcell's Story",
         thumbnail: "/episodes/ep3.jpg",
-        description: "The untold story of Bangladesh's progressive metal pioneers",
+        description:
+          "The untold story of Bangladesh's progressive metal pioneers",
         views: "88K",
         platform: "Facebook",
       },
@@ -278,13 +319,13 @@ export const siteContent = {
       {
         name: "Facebook",
         url: "https://www.facebook.com/profile.php?id=61577216227183",
-        followers: "20K+",
+        followers: "35K+",
         icon: "facebook",
       },
       {
         name: "YouTube",
         url: "https://www.youtube.com/@chilliflakesstudio",
-        followers: "3.61K",
+        followers: "6K",
         icon: "youtube",
       },
       {
