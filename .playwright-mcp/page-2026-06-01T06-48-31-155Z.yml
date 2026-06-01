@@ -1,0 +1,527 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e6]:
+        - link "Chilli Flakes Studio" [ref=e7] [cursor=pointer]:
+          - /url: "#"
+          - img "Chilli Flakes Studio" [ref=e10]
+        - generic [ref=e11]:
+          - link "Statistics" [ref=e12] [cursor=pointer]:
+            - /url: "#stats"
+            - text: Statistics
+          - link "Guests" [ref=e14] [cursor=pointer]:
+            - /url: "#guests"
+            - text: Guests
+          - link "Episodes" [ref=e17] [cursor=pointer]:
+            - /url: "#playlist-episodes"
+            - text: Episodes
+          - link "Global Reach" [ref=e19] [cursor=pointer]:
+            - /url: "#reach"
+            - text: Global Reach
+          - link "Our Story" [ref=e21] [cursor=pointer]:
+            - /url: "#about"
+            - text: Our Story
+          - link "Gallery" [ref=e23] [cursor=pointer]:
+            - /url: "#local-gallery"
+            - text: Gallery
+          - link "Contact" [ref=e25] [cursor=pointer]:
+            - /url: "#contact"
+            - text: Contact
+          - link "Watch Now" [ref=e27] [cursor=pointer]:
+            - /url: https://youtube.com/@chilliflakesstudio
+            - generic [ref=e28]:
+              - img [ref=e29]
+              - text: Watch Now
+    - generic [ref=e32]:
+      - generic [ref=e34]:
+        - img "Chilli Flakes Studio" [ref=e36]
+        - generic [ref=e38]: New Episodes Every Month
+        - heading "Where Stories Ignite" [level=1] [ref=e40]:
+          - generic [ref=e41]: Where
+          - generic [ref=e42]: Stories Ignite
+        - paragraph [ref=e43]: Sydney’s leading podcast amplifying diverse voices and global perspectives
+        - generic [ref=e44]:
+          - link "Watch on YouTube" [ref=e45] [cursor=pointer]:
+            - /url: https://youtube.com/@chilliflakesstudio
+            - img [ref=e47]
+            - generic [ref=e49]: Watch on YouTube
+          - link "Be Our Next Guest" [ref=e50] [cursor=pointer]:
+            - /url: "#contact"
+            - img [ref=e51]
+            - generic [ref=e53]: Be Our Next Guest
+      - generic:
+        - heading "CHILLI FLAKES Studio" [level=2]
+    - generic [ref=e58]:
+      - generic [ref=e59]:
+        - generic [ref=e60]: Our Impact
+        - heading "Channel Statistics" [level=2] [ref=e61]
+      - generic [ref=e62]:
+        - generic [ref=e65]:
+          - generic [ref=e66]: 0K+
+          - heading "Facebook Followers" [level=3] [ref=e67]
+          - paragraph [ref=e68]: Growing community
+        - generic [ref=e73]:
+          - generic [ref=e74]: 0M+
+          - heading "Total Views" [level=3] [ref=e75]
+          - paragraph [ref=e76]: Across META platforms
+        - generic [ref=e81]:
+          - generic [ref=e82]: 0.00K+
+          - heading "YouTube Subscribers" [level=3] [ref=e83]
+          - paragraph [ref=e84]: And counting
+        - generic [ref=e89]:
+          - generic [ref=e90]: 0K+
+          - heading "YouTube Views" [level=3] [ref=e91]
+          - paragraph [ref=e92]: Engaged audience
+    - generic [ref=e100]:
+      - generic [ref=e101]:
+        - generic [ref=e102]: Our Conversations
+        - heading "Featured Guests" [level=2] [ref=e103]
+        - paragraph [ref=e104]: Extraordinary individuals sharing their inspiring stories, insights, and journeys
+      - generic [ref=e105]:
+        - button "All" [ref=e106] [cursor=pointer]
+        - button "Sports" [ref=e107] [cursor=pointer]
+        - button "Music" [ref=e108] [cursor=pointer]
+        - button "Medical" [ref=e109] [cursor=pointer]
+        - button "Education" [ref=e110] [cursor=pointer]
+        - button "Defense" [ref=e111] [cursor=pointer]
+        - button "Upcoming" [ref=e112] [cursor=pointer]
+        - button "Community Advocate" [ref=e113] [cursor=pointer]
+      - generic [ref=e114]:
+        - generic [ref=e117]:
+          - img "Aminul Islam Bulbul" [ref=e118]
+          - generic [ref=e121]: Sports
+          - generic [ref=e122]:
+            - heading "Aminul Islam Bulbul" [level=3] [ref=e123]
+            - paragraph [ref=e124]: President of BCB
+          - link [ref=e125] [cursor=pointer]:
+            - /url: https://www.youtube.com/embed/4gJz7TtLWKs?autoplay=1&rel=0
+            - img [ref=e127]
+        - generic [ref=e132]:
+          - img "Khaled Mashud Pilot" [ref=e133]
+          - generic [ref=e136]: Sports
+          - generic [ref=e137]:
+            - heading "Khaled Mashud Pilot" [level=3] [ref=e138]
+            - paragraph [ref=e139]: Former Captain, Bangladesh Cricket
+          - link [ref=e140] [cursor=pointer]:
+            - /url: https://www.youtube.com/embed/y7B1_N6NB0s?autoplay=1&rel=0
+            - img [ref=e142]
+        - generic [ref=e147]:
+          - img "Habibul Bashar" [ref=e148]
+          - generic [ref=e151]: Sports
+          - generic [ref=e152]:
+            - heading "Habibul Bashar" [level=3] [ref=e153]
+            - paragraph [ref=e154]: Former Captain, Bangladesh Cricket
+          - link [ref=e155] [cursor=pointer]:
+            - /url: https://www.youtube.com/embed/oWwvR9G4QIc?autoplay=1&rel=0
+            - img [ref=e157]
+        - generic [ref=e162]:
+          - img "Razaul Karim Sumon" [ref=e163]
+          - generic [ref=e166]: Defense
+          - generic [ref=e167]:
+            - heading "Razaul Karim Sumon" [level=3] [ref=e168]
+            - paragraph [ref=e169]: Former Military Officer
+          - link [ref=e170] [cursor=pointer]:
+            - /url: https://www.youtube.com/embed/CBiJhXtH8lE?autoplay=1&rel=0
+            - img [ref=e172]
+        - generic [ref=e177]:
+          - img "Khan Sobayel Bin Rafiq" [ref=e178]
+          - generic [ref=e181]: Defense
+          - generic [ref=e182]:
+            - heading "Khan Sobayel Bin Rafiq" [level=3] [ref=e183]
+            - paragraph [ref=e184]: Former Military Officer
+          - link [ref=e185] [cursor=pointer]:
+            - /url: https://www.youtube.com/embed/CBiJhXtH8lE?autoplay=1&rel=0
+            - img [ref=e187]
+        - generic [ref=e192]:
+          - img "Imroze Ahmed" [ref=e193]
+          - generic [ref=e196]: Defense
+          - generic [ref=e197]:
+            - heading "Imroze Ahmed" [level=3] [ref=e198]
+            - paragraph [ref=e199]: Senior Vice President, BOA and Former Military Officer
+          - link [ref=e200] [cursor=pointer]:
+            - /url: https://www.youtube.com/embed/qzF5b08oMLI?autoplay=1&rel=0
+            - img [ref=e202]
+        - generic [ref=e207]:
+          - img "Tabith Awal" [ref=e208]
+          - generic [ref=e211]: Sports
+          - generic [ref=e212]:
+            - heading "Tabith Awal" [level=3] [ref=e213]
+            - paragraph [ref=e214]: President of BFF
+          - link [ref=e215] [cursor=pointer]:
+            - /url: https://www.youtube.com/embed/j_pO9OuJEwo?autoplay=1&rel=0
+            - img [ref=e217]
+        - generic [ref=e222]:
+          - img "Hamin Ahmed" [ref=e223]
+          - generic [ref=e226]: Music
+          - generic [ref=e227]:
+            - heading "Hamin Ahmed" [level=3] [ref=e228]
+            - paragraph [ref=e229]: Founder of Band Miles
+          - link [ref=e230] [cursor=pointer]:
+            - /url: https://www.youtube.com/embed/yQJrKS3d4bI?autoplay=1&rel=0
+            - img [ref=e232]
+      - button "View more" [ref=e236] [cursor=pointer]:
+        - text: View more
+        - img [ref=e237]
+    - generic [ref=e249]:
+      - generic [ref=e250]:
+        - generic [ref=e251]: Watch Now
+        - heading "Featured Videos" [level=2] [ref=e252]
+      - generic [ref=e255]:
+        - link "Episode 1 Episode 1" [ref=e257] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=UeiubCh1j6A
+          - generic [ref=e259]:
+            - img "Episode 1" [ref=e260]
+            - img [ref=e264]
+            - heading "Episode 1" [level=3] [ref=e268]
+        - link "Episode 2 Episode 2" [ref=e270] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=xCvByADV8RM
+          - generic [ref=e272]:
+            - img "Episode 2" [ref=e273]
+            - img [ref=e277]
+            - heading "Episode 2" [level=3] [ref=e281]
+        - link "Episode 3 Episode 3" [ref=e283] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=mEiZtXjCTJg
+          - generic [ref=e285]:
+            - img "Episode 3" [ref=e286]
+            - img [ref=e290]
+            - heading "Episode 3" [level=3] [ref=e294]
+        - link "Episode 4 Episode 4" [ref=e296] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=KBcqPSEC17k
+          - generic [ref=e298]:
+            - img "Episode 4" [ref=e299]
+            - img [ref=e303]
+            - heading "Episode 4" [level=3] [ref=e307]
+        - link "Episode 5 Episode 5" [ref=e309] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=j_pO9OuJEwo
+          - generic [ref=e311]:
+            - img "Episode 5" [ref=e312]
+            - img [ref=e316]
+            - heading "Episode 5" [level=3] [ref=e320]
+        - link "Episode 6 Episode 6" [ref=e322] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=ZBHpB3FsXfQ
+          - generic [ref=e324]:
+            - img "Episode 6" [ref=e325]
+            - img [ref=e329]
+            - heading "Episode 6" [level=3] [ref=e333]
+        - link "Episode 7 Episode 7" [ref=e335] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=CBiJhXtH8lE
+          - generic [ref=e337]:
+            - img "Episode 7" [ref=e338]
+            - img [ref=e342]
+            - heading "Episode 7" [level=3] [ref=e346]
+        - link "Episode 8 Episode 8" [ref=e348] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=oWwvR9G4QIc
+          - generic [ref=e350]:
+            - img "Episode 8" [ref=e351]
+            - img [ref=e355]
+            - heading "Episode 8" [level=3] [ref=e359]
+        - link "Episode 9 Episode 9" [ref=e361] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=qzF5b08oMLI
+          - generic [ref=e363]:
+            - img "Episode 9" [ref=e364]
+            - img [ref=e368]
+            - heading "Episode 9" [level=3] [ref=e372]
+        - link "Episode 10 Episode 10" [ref=e374] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=yQJrKS3d4bI
+          - generic [ref=e376]:
+            - img "Episode 10" [ref=e377]
+            - img [ref=e381]
+            - heading "Episode 10" [level=3] [ref=e385]
+        - link "Episode 11 Episode 11" [ref=e387] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=4gJz7TtLWKs
+          - generic [ref=e389]:
+            - img "Episode 11" [ref=e390]
+            - img [ref=e394]
+            - heading "Episode 11" [level=3] [ref=e398]
+        - link "Episode 12 Episode 12" [ref=e400] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=1u9pzpplWe4
+          - generic [ref=e402]:
+            - img "Episode 12" [ref=e403]
+            - img [ref=e407]
+            - heading "Episode 12" [level=3] [ref=e411]
+        - link "Episode 13 Episode 13" [ref=e413] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=5qoQKD7PdA8
+          - generic [ref=e415]:
+            - img "Episode 13" [ref=e416]
+            - img [ref=e420]
+            - heading "Episode 13" [level=3] [ref=e424]
+        - link "Episode 14 Episode 14" [ref=e426] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=7oTdrucDw0w
+          - generic [ref=e428]:
+            - img "Episode 14" [ref=e429]
+            - img [ref=e433]
+            - heading "Episode 14" [level=3] [ref=e437]
+        - link "Episode 15 Episode 15" [ref=e439] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=VrWdF5wC8IQ
+          - generic [ref=e441]:
+            - img "Episode 15" [ref=e442]
+            - img [ref=e446]
+            - heading "Episode 15" [level=3] [ref=e450]
+        - link "Episode 16 Episode 16" [ref=e452] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=mFQ4cBACB5c
+          - generic [ref=e454]:
+            - img "Episode 16" [ref=e455]
+            - img [ref=e459]
+            - heading "Episode 16" [level=3] [ref=e463]
+        - link "Episode 17 Episode 17" [ref=e465] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=U1x610rt1qY
+          - generic [ref=e467]:
+            - img "Episode 17" [ref=e468]
+            - img [ref=e472]
+            - heading "Episode 17" [level=3] [ref=e476]
+        - link "Episode 18 Episode 18" [ref=e478] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=zcEBr5Xvcio
+          - generic [ref=e480]:
+            - img "Episode 18" [ref=e481]
+            - img [ref=e485]
+            - heading "Episode 18" [level=3] [ref=e489]
+        - link "Episode 19 Episode 19" [ref=e491] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=n3iuo0HEgEg
+          - generic [ref=e493]:
+            - img "Episode 19" [ref=e494]
+            - img [ref=e498]
+            - heading "Episode 19" [level=3] [ref=e502]
+        - link "Episode 20 Episode 20" [ref=e504] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=cwrlxWBGuEs
+          - generic [ref=e506]:
+            - img "Episode 20" [ref=e507]
+            - img [ref=e511]
+            - heading "Episode 20" [level=3] [ref=e515]
+      - link "View All Episodes" [ref=e517] [cursor=pointer]:
+        - /url: https://www.youtube.com/playlist?list=PLBxZq9sogFVVjfeKvXd51MLW3FiKPZz_K
+        - img [ref=e518]
+        - text: View All Episodes
+    - generic [ref=e525]:
+      - generic [ref=e526]:
+        - generic [ref=e527]: Worldwide Audience
+        - heading "Global Reach" [level=2] [ref=e528]
+        - paragraph [ref=e529]: Our voices resonate across continents, connecting stories, cultures, and communities worldwide.
+      - generic [ref=e530]:
+        - generic [ref=e531]:
+          - generic [ref=e533]:
+            - generic [ref=e534]: Bangladesh
+            - generic [ref=e535]: 60%
+          - generic [ref=e538]:
+            - generic [ref=e539]: Australia
+            - generic [ref=e540]: 20%
+          - generic [ref=e543]:
+            - generic [ref=e544]: India
+            - generic [ref=e545]: 8%
+          - generic [ref=e548]:
+            - generic [ref=e549]: Pakistan
+            - generic [ref=e550]: 5%
+          - generic [ref=e553]:
+            - generic [ref=e554]: Canada
+            - generic [ref=e555]: 4%
+          - generic [ref=e558]:
+            - generic [ref=e559]: United Kingdom
+            - generic [ref=e560]: 3%
+        - generic [ref=e568]:
+          - generic: 6+
+          - generic [ref=e569]: Countries
+    - generic [ref=e583]:
+      - generic [ref=e584]:
+        - generic [ref=e585]: Our Partners
+        - heading "Proud Sponsors" [level=2] [ref=e586]
+        - paragraph [ref=e587]: Backed by amazing brands who believe in voices that matter
+      - generic [ref=e588]:
+        - img "Platinum Grand" [ref=e592]
+        - img "Waasey" [ref=e598]
+        - img "Hirae & Co" [ref=e604]
+        - img "Younus Group" [ref=e610]
+        - img "Jago Corporation" [ref=e616]
+        - img "Manola" [ref=e622]
+        - img "Osmo" [ref=e628]
+    - generic [ref=e636]:
+      - generic [ref=e637]:
+        - generic [ref=e638]: Who We Are
+        - heading "Our Story" [level=2] [ref=e639]:
+          - generic [ref=e640]: Our
+          - text: Story
+        - paragraph [ref=e641]: Chilliflakes Studio is a Sydney-based podcast platform sharing powerful stories and global perspectives. We host thought leaders, artists, athletes, and changemakers for conversations that inspire and connect across borders.
+      - generic [ref=e645]:
+        - img [ref=e646]
+        - generic [ref=e648]:
+          - generic [ref=e649]: Mission Statement
+          - paragraph [ref=e650]: Chilli Flakes Studio — Bold Conversations. Unheard truths. Unthinkable perspectives.
+          - generic [ref=e651]:
+            - img [ref=e653]
+            - generic [ref=e655]:
+              - generic [ref=e656]: Chilli Flakes
+              - text: Studio
+    - generic [ref=e685]:
+      - generic [ref=e686]:
+        - generic [ref=e687]: Behind The Scenes
+        - heading "Media Gallery" [level=2] [ref=e688]
+        - paragraph [ref=e689]: Explore our exclusive behind-the-scenes moments and memorable highlights
+      - generic [ref=e690]:
+        - link "Studio Session" [ref=e691] [cursor=pointer]:
+          - /url: /guests/gellary/1.webp
+          - img "Studio Session" [ref=e692]
+          - img [ref=e695]
+        - link "Interview Moments" [ref=e697] [cursor=pointer]:
+          - /url: /guests/gellary/02.jpg
+          - img "Interview Moments" [ref=e698]
+          - img [ref=e701]
+        - link "Behind The Camera" [ref=e703] [cursor=pointer]:
+          - /url: /guests/gellary/03.jpg
+          - img "Behind The Camera" [ref=e704]
+          - img [ref=e707]
+        - link "Guest Arrival" [ref=e709] [cursor=pointer]:
+          - /url: /guests/gellary/04.jpg
+          - img "Guest Arrival" [ref=e710]
+          - img [ref=e713]
+        - link "Recording Session" [ref=e715] [cursor=pointer]:
+          - /url: /guests/gellary/05.jpg
+          - img "Recording Session" [ref=e716]
+          - img [ref=e719]
+        - link "Team Meeting" [ref=e721] [cursor=pointer]:
+          - /url: /guests/gellary/06.jpg
+          - img "Team Meeting" [ref=e722]
+          - img [ref=e725]
+        - link "Production Setup" [ref=e727] [cursor=pointer]:
+          - /url: /guests/gellary/07.jpg
+          - img "Production Setup" [ref=e728]
+          - img [ref=e731]
+        - link "Live Podcast" [ref=e733] [cursor=pointer]:
+          - /url: /guests/gellary/08.webp
+          - img "Live Podcast" [ref=e734]
+          - img [ref=e737]
+        - link "Creative Discussion" [ref=e739] [cursor=pointer]:
+          - /url: /guests/gellary/09.webp
+          - img "Creative Discussion" [ref=e740]
+          - img [ref=e743]
+        - link "Studio Tour" [ref=e745] [cursor=pointer]:
+          - /url: /guests/gellary/10.webp
+          - img "Studio Tour" [ref=e746]
+          - img [ref=e749]
+        - link "Special Episode" [ref=e751] [cursor=pointer]:
+          - /url: /guests/gellary/11.webp
+          - img "Special Episode" [ref=e752]
+          - img [ref=e755]
+        - link "Memorable Moments" [ref=e757] [cursor=pointer]:
+          - /url: /guests/gellary/12.webp
+          - img "Memorable Moments" [ref=e758]
+          - img [ref=e761]
+      - link "Follow Us on Instagram" [ref=e764] [cursor=pointer]:
+        - /url: https://www.instagram.com/chilliflakesstudio/
+        - img [ref=e765]
+        - generic [ref=e767]: Follow Us on Instagram
+        - img [ref=e768]
+    - generic [ref=e773]:
+      - generic [ref=e774]:
+        - generic [ref=e775]: Follow Us
+        - heading "Connect With Us" [level=2] [ref=e776]
+      - generic [ref=e777]:
+        - link "Facebook 35K+ Followers" [ref=e778] [cursor=pointer]:
+          - /url: https://www.facebook.com/profile.php?id=61577216227183
+          - generic [ref=e780]:
+            - img [ref=e783]
+            - heading "Facebook" [level=3] [ref=e785]
+            - generic [ref=e786]: 35K+
+            - text: Followers
+        - link "YouTube 6K Subscribers" [ref=e789] [cursor=pointer]:
+          - /url: https://www.youtube.com/@chilliflakesstudio
+          - generic [ref=e791]:
+            - img [ref=e794]
+            - heading "YouTube" [level=3] [ref=e796]
+            - generic [ref=e797]: 6K
+            - text: Subscribers
+        - link "Instagram 90+ Followers" [ref=e800] [cursor=pointer]:
+          - /url: https://www.instagram.com/chilliflakesstudio
+          - generic [ref=e802]:
+            - img [ref=e805]
+            - heading "Instagram" [level=3] [ref=e807]
+            - generic [ref=e808]: 90+
+            - text: Followers
+        - link "TikTok 319+ Followers" [ref=e811] [cursor=pointer]:
+          - /url: https://www.tiktok.com/@thechilliflakesst
+          - generic [ref=e813]:
+            - img [ref=e816]
+            - heading "TikTok" [level=3] [ref=e818]
+            - generic [ref=e819]: 319+
+            - text: Followers
+    - generic [ref=e829]:
+      - generic [ref=e831]:
+        - img [ref=e833]
+        - heading "Be Our Next Guest" [level=3] [ref=e835]
+        - paragraph [ref=e836]: Have a story to share? We'd love to hear from you.
+        - link "Contact us thechilliflakesstudio@gmail.com" [ref=e837] [cursor=pointer]:
+          - /url: mailto:thechilliflakesstudio@gmail.com
+          - img [ref=e839]
+          - generic [ref=e841]:
+            - paragraph [ref=e842]: Contact us
+            - paragraph [ref=e843]: thechilliflakesstudio@gmail.com
+      - generic [ref=e847]:
+        - img [ref=e851]
+        - heading "Never Miss an Episode" [level=3] [ref=e853]
+        - paragraph [ref=e854]: Subscribe to get notified when new episodes drop.
+        - button "Subscribe" [ref=e855] [cursor=pointer]:
+          - generic [ref=e856]:
+            - text: Subscribe
+            - img [ref=e857]
+    - generic [ref=e865]:
+      - generic [ref=e866]:
+        - generic [ref=e867]:
+          - img "Chilli Flakes Studio" [ref=e869]
+          - paragraph [ref=e870]: Bold Conversations. Unheard truths. Unthinkable perspectives
+        - generic [ref=e871]:
+          - heading "Quick Links" [level=4] [ref=e872]
+          - list [ref=e873]:
+            - listitem [ref=e874]:
+              - link "Statistics" [ref=e875] [cursor=pointer]:
+                - /url: "#stats"
+                - text: Statistics
+            - listitem [ref=e876]:
+              - link "About" [ref=e877] [cursor=pointer]:
+                - /url: "#about"
+                - text: About
+            - listitem [ref=e878]:
+              - link "Guests" [ref=e879] [cursor=pointer]:
+                - /url: "#guests"
+                - text: Guests
+            - listitem [ref=e880]:
+              - link "Episodes" [ref=e881] [cursor=pointer]:
+                - /url: "#episodes"
+                - text: Episodes
+        - generic [ref=e882]:
+          - heading "Legal" [level=4] [ref=e883]
+          - list [ref=e884]:
+            - listitem [ref=e885]:
+              - link "Privacy Policy" [ref=e886] [cursor=pointer]:
+                - /url: "#"
+                - text: Privacy Policy
+            - listitem [ref=e887]:
+              - link "Terms of Service" [ref=e888] [cursor=pointer]:
+                - /url: "#"
+                - text: Terms of Service
+            - listitem [ref=e889]:
+              - link "Contact" [ref=e890] [cursor=pointer]:
+                - /url: "#"
+                - text: Contact
+        - generic [ref=e891]:
+          - heading "Connect With Us" [level=4] [ref=e892]
+          - paragraph [ref=e893]: Follow our journey and stay updated with the latest episodes and behind-the-scenes content.
+          - generic [ref=e894]:
+            - link [ref=e895] [cursor=pointer]:
+              - /url: https://www.facebook.com/profile.php?id=61577216227183
+              - img [ref=e896]
+            - link [ref=e898] [cursor=pointer]:
+              - /url: https://www.youtube.com/@chilliflakesstudio
+              - img [ref=e899]
+            - link [ref=e901] [cursor=pointer]:
+              - /url: https://www.instagram.com/chilliflakesstudio
+              - img [ref=e902]
+            - link [ref=e904] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@thechilliflakesst
+              - img [ref=e905]
+      - generic [ref=e908]:
+        - paragraph [ref=e909]: © 2026 Chilli Flakes Studio. All rights reserved.
+        - paragraph [ref=e910]:
+          - text: Made by
+          - img [ref=e911]
+          - link "Sklentr" [ref=e913] [cursor=pointer]:
+            - /url: https://www.sklentr.com/
+  - button "Open Next.js Dev Tools" [ref=e919] [cursor=pointer]:
+    - img [ref=e920]
+  - alert [ref=e923]
